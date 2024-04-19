@@ -1279,7 +1279,19 @@ public class GUI {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                teacherIDTf.setText("");
+                teacherNameTf.setText("");
+                addressTf.setText("");
+                workingTypeTf.setText("");
+                employmentStatusTf.setText("");
+                workingHoursTf.setText("");
+                departmentTf.setText("");
+                yearsOfExperienceTf.setText("");
+                gradedScoreTf.setText("");
+                salaryTf.setText("");
+                specializationTf.setText("");
+                academicQualificationsTf.setText("");
+                performanceIndexTf.setText("");
             }
         });
     }
