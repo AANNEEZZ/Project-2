@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.GridBagConstraints;
@@ -9,7 +10,69 @@ import java.util.TreeMap;
 import java.awt.Color;
 
 public class GUI {
-    public GUI(){
+    private ArrayList<Teacher> Teachers = new ArrayList<>();
+
+    // Add a Lecturer
+    public void addLecturer(int teacherID, String teacherName, String address, String workingType,
+                            String employmentStatus, int gradedScore, int yearsOfExperience) {
+        Lecturer lecturer = new Lecturer(teacherID, teacherName, address, workingType, employmentStatus,
+                yearsOfExperience, "Department");
+        lecturer.setGradedScore(gradedScore);
+        Teachers.add(lecturer);
+    }
+
+    // Add a Tutor
+    public void addTutor(int teacherID, String teacherName, String address, String workingType,
+                         String employmentStatus, double salary, String specialization,
+                         String academicQualifications, int performanceIndex, int workingHours) {
+        Tutor tutor = new Tutor(teacherID, teacherName, address, workingType, employmentStatus, salary,
+                specialization, academicQualifications, performanceIndex, workingHours);
+        Teachers.add(tutor);
+    }
+
+    // Grade the Assignments
+    public void gradeAssignment(int teacherID, int gradedScore, String department, int yearsOfExperience) {
+        for (Teacher teacher : Teachers) {
+            if (teacher.getTeacherID() == teacherID && teacher instanceof Lecturer) {
+                ((Lecturer) teacher).gradeAssignment(department, yearsOfExperience, gradedScore);
+                break;
+            }
+        }
+    }
+
+    // Set the salary of Tutor
+    public void setTutorSalary(int teacherID, double newSalary, int newPerformanceIndex) {
+        for (Teacher teacher : Teachers) {
+            if (teacher.getTeacherID() == teacherID && teacher instanceof Tutor) {
+                ((Tutor) teacher).setSalary(newSalary, newPerformanceIndex);
+                break;
+            }
+        }
+    }
+
+    // Remove the tutor
+    public void removeTutor(int teacherID) {
+        for (Teacher teacher : Teachers) {
+            if (teacher.getTeacherID() == teacherID && teacher instanceof Tutor) {
+                Teachers.remove(teacher);
+                break;
+            }
+        }
+    }
+
+    // Display
+    public void displayTeacherInfo(int teacherID) {
+        for (Teacher teacher : Teachers) {
+            if (teacher.getTeacherID() == teacherID) {
+                teacher.display();
+                break;
+            }
+        }
+    }
+
+    public GUI(ArrayList<Teacher> Teachers){
+        this.Teachers = Teachers;
+
         JFrame frame = new JFrame("GUI");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(500,500);
@@ -422,6 +485,20 @@ public class GUI {
                 newPerformanceIndexLabel.setVisible(false);
                 newSalaryTf.setVisible(false);
                 newPerformanceIndexTf.setVisible(false);
+                
+                teacherIDTf.setText("");
+                teacherNameTf.setText("");
+                addressTf.setText("");
+                workingTypeTf.setText("");
+                employmentStatusTf.setText("");
+                workingHoursTf.setText("");
+                departmentTf.setText("");
+                yearsOfExperienceTf.setText("");
+                gradedScoreTf.setText("");
+                salaryTf.setText("");
+                specializationTf.setText("");
+                academicQualificationsTf.setText("");
+                performanceIndexTf.setText("");
 
             }
         });
@@ -1294,9 +1371,82 @@ public class GUI {
                 performanceIndexTf.setText("");
             }
         });
+
+        addLecturerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int teacherID = Integer.parseInt(teacherIDTf.getText());
+                for (Teacher teacher : Teachers) {
+                    if (teacher.getTeacherID() == teacherID) {
+                        JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                        return; // Stop further execution
+                    }
+                }
+                String teacherName =  teacherNameTf.getText();
+                String address = addressTf.getText();
+                String workingType = workingTypeTf.getText();
+                String employmentStatus = employmentStatusTf.getText();
+                int yearsOfExperience = Integer.parseInt(yearsOfExperienceTf.getText());
+                int gradedScore = Integer.parseInt(gradedScoreTf.getText());
+
+                // Check if any text field is empty
+                if (teacherIDTf.getText().isEmpty() || teacherNameTf.getText().isEmpty() ||
+                        addressTf.getText().isEmpty() || workingTypeTf.getText().isEmpty() ||
+                        employmentStatusTf.getText().isEmpty() || yearsOfExperienceTf.getText().isEmpty() ||
+                        gradedScoreTf.getText().isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                    return; // Stop further execution
+                } else {
+                    addLecturer(teacherID, teacherName, address, workingType, employmentStatus, gradedScore, yearsOfExperience);
+                    JOptionPane.showMessageDialog(null, "Lecturer Added");
+                }
+            }
+        });
+
+        addTutorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int teacherID = Integer.parseInt(teacherIDTf.getText());
+                for (Teacher teacher : Teachers) {
+                    if (teacher.getTeacherID() == teacherID) {
+                        JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                        return; // Stop further execution
+                    }
+                }
+                String teacherName =  teacherNameTf.getText();
+                String address = addressTf.getText();
+                String workingType = workingTypeTf.getText();
+                String employmentStatus = employmentStatusTf.getText();
+                int performanceIndex = Integer.parseInt(performanceIndexTf.getText());
+                int workingHours = Integer.parseInt(workingHoursTf.getText());
+                double salary =  Double.parseDouble(salaryTf.getText());
+                String specialization = specializationTf.getText();
+                String academicQualifications = academicQualificationsTf.getText();
+
+                if (teacherIDTf.getText().isEmpty() || teacherNameTf.getText().isEmpty() ||
+                        addressTf.getText().isEmpty() || workingTypeTf.getText().isEmpty() ||
+                        employmentStatusTf.getText().isEmpty() || performanceIndexTf.getText().isEmpty() ||
+                        workingHoursTf.getText().isEmpty() || salaryTf.getText().isEmpty() ||
+                        specializationTf.getText().isEmpty() || academicQualificationsTf.getText().isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                    return; // Stop further execution
+                } else {
+                    addTutor(teacherID, teacherName, address, workingType, employmentStatus, salary, specialization, academicQualifications, performanceIndex, workingHours);
+                    JOptionPane.showMessageDialog(null, "Tutor Added");
+                }
+
+
+            }
+        });
     }
 
     public static void main(String[] args) {
-        new GUI();
+        ArrayList<Teacher> Teachers = new ArrayList<>();
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new GUI(Teachers);
+            }
+        });
     }
 }
