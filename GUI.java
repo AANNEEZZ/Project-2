@@ -1,13 +1,13 @@
+import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import javax.swing.*;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JScrollPane;
 import java.util.TreeMap;
-import java.awt.Color;
 
 public class GUI {
     private ArrayList<Teacher> Teachers = new ArrayList<>();
@@ -61,15 +61,6 @@ public class GUI {
     }
 
     // Display
-    public void displayTeacherInfo(int teacherID) {
-        for (Teacher teacher : Teachers) {
-            if (teacher.getTeacherID() == teacherID) {
-                teacher.display();
-                break;
-            }
-        }
-    }
-
     public GUI(ArrayList<Teacher> Teachers){
         this.Teachers = Teachers;
 
@@ -97,6 +88,8 @@ public class GUI {
         JMenuItem setSalaryInfoItem = new JMenuItem("Set Salary");
         JMenuItem removeTutorInfoItem = new JMenuItem("Remove Tutor");
         JMenuItem displayInfoItem =  new JMenuItem("Display");
+
+        JTable teacherTable = new JTable();
 
         menuBar.add(teacherMenu);
         menuBar.add(lecturerMenu);
@@ -1434,11 +1427,115 @@ public class GUI {
                     addTutor(teacherID, teacherName, address, workingType, employmentStatus, salary, specialization, academicQualifications, performanceIndex, workingHours);
                     JOptionPane.showMessageDialog(null, "Tutor Added");
                 }
+            }
+        });
 
+        gradeAssignmentsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int teacherID = Integer.parseInt(teacherIDTf.getText());
+                for (Teacher teacher : Teachers) {
+                    if (teacher.getTeacherID() == teacherID) {
+                        JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                        return; // Stop further execution
+                    }
+                }
+                String department = departmentTf.getText();
+                int gradedScore = Integer.parseInt(gradedScoreTf.getText());
+                int yearsOfExperience = Integer.parseInt(yearsOfExperienceTf.getText());
 
+                if (teacherIDTf.getText().isEmpty() || departmentTf.getText().isEmpty() || gradedScoreTf.getText().isEmpty()|| yearsOfExperienceTf.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }else{
+                    gradeAssignment(teacherID, gradedScore, department, yearsOfExperience);
+                    JOptionPane.showMessageDialog(null,"Grades has been assigned");
+                }
+            }
+        });
+
+        setSalaryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int teacherID = Integer.parseInt(teacherIDTf.getText());
+                for (Teacher teacher : Teachers) {
+                    if (teacher.getTeacherID() == teacherID) {
+                        JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                        return; // Stop further execution
+                    }
+                }
+                int newSalary = Integer.parseInt(newSalaryTf.getText());
+                int newPerformanceIndex = Integer.parseInt(newPerformanceIndexTf.getText());
+
+                if (teacherIDTf.getText().isEmpty() || newSalaryTf.getText().isEmpty() || newPerformanceIndexTf.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    setTutorSalary(teacherID, newSalary, newPerformanceIndex);
+                    JOptionPane.showMessageDialog(null,"New Salary has been assigned");
+                }
+            }
+        });
+
+        removeTutorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int teacherID = Integer.parseInt(teacherIDTf.getText());
+                if (teacherIDTf.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                }else{
+                    removeTutor(teacherID);
+                    JOptionPane.showMessageDialog(null,"Tutor has been removed");
+                }
+            }
+        });
+
+        directToDisplayButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // Create a new JFrame to hold the table
+                JFrame frame = new JFrame("Teacher Information");
+
+                // Create a JTable to display the teacher information
+                String[] columnNames = {"Teacher ID", "Teacher Name", "Address", "Working Type", "Employment Status",
+                        "Years of Experience", "Graded Score", "Department", "Salary", "Specialization",
+                        "Academic Qualifications", "Performance Index", "Teacher Type"}; // Add "Teacher Type" column
+                Object[][] data = new Object[Teachers.size()][13]; // Assuming you have 13 columns now
+
+                int i = 0;
+                for (Teacher teacher : Teachers) {
+                    String teacherType = "";
+                    if (teacher instanceof Lecturer) {
+                        teacherType = "Lecturer";
+                        data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
+                                teacher.getWorkingType(), teacher.getEmploymentStatus(),
+                                ((Lecturer) teacher).getYearsOfExperience(), ((Lecturer) teacher).getGradedScore(),
+                                ((Lecturer) teacher).getDepartment(), "", "", "", "", teacherType}; // Fill empty fields with ""
+                    } else if (teacher instanceof Tutor) {
+                        teacherType = "Tutor";
+                        data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
+                                teacher.getWorkingType(), teacher.getEmploymentStatus(),
+                                "", "", "", ((Tutor) teacher).getSalary(), ((Tutor) teacher).getSpecialization(),
+                                ((Tutor) teacher).getAcademicQualifications(), ((Tutor) teacher).getPerformanceIndex(),
+                                teacherType};
+                    }
+                    i++;
+                }
+                JTable table = new JTable(data, columnNames);
+
+                // Add the table to a JScrollPane
+                JScrollPane scrollPane = new JScrollPane(table);
+                frame.add(scrollPane);
+
+                // Set JFrame properties
+                frame.pack();
+                frame.setLocationRelativeTo(null); // Center the frame
+                frame.setVisible(true);
             }
         });
     }
+
+
 
     public static void main(String[] args) {
         ArrayList<Teacher> Teachers = new ArrayList<>();
