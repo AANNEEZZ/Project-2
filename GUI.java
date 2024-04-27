@@ -12,7 +12,7 @@ import java.util.TreeMap;
 public class GUI {
     private ArrayList<Teacher> Teachers = new ArrayList<>();
 
-    // Add a Lecturer
+    //Making a method to Add a Lecturer
     public void addLecturer(int teacherID, String teacherName, String address, String workingType,
                             String employmentStatus, int gradedScore, int yearsOfExperience) {
         Lecturer lecturer = new Lecturer(teacherID, teacherName, address, workingType, employmentStatus,
@@ -21,7 +21,7 @@ public class GUI {
         Teachers.add(lecturer);
     }
 
-    // Add a Tutor
+    //Making a method to Add a Tutor
     public void addTutor(int teacherID, String teacherName, String address, String workingType,
                          String employmentStatus, double salary, String specialization,
                          String academicQualifications, int performanceIndex, int workingHours) {
@@ -30,7 +30,7 @@ public class GUI {
         Teachers.add(tutor);
     }
 
-    // Grade the Assignments
+    //Making a method to Grade the Assignments
     public void gradeAssignment(int teacherID, int gradedScore, String department, int yearsOfExperience) {
         for (Teacher teacher : Teachers) {
             if (teacher.getTeacherID() == teacherID && teacher instanceof Lecturer) {
@@ -40,7 +40,7 @@ public class GUI {
         }
     }
 
-    // Set the salary of Tutor
+    //Making a method to Set the salary of Tutor
     public void setTutorSalary(int teacherID, double newSalary, int newPerformanceIndex) {
         for (Teacher teacher : Teachers) {
             if (teacher.getTeacherID() == teacherID && teacher instanceof Tutor) {
@@ -50,7 +50,7 @@ public class GUI {
         }
     }
 
-    // Remove the tutor
+    //Making a method to Remove the tutor
     public void removeTutor(int teacherID) {
         for (Teacher teacher : Teachers) {
             if (teacher.getTeacherID() == teacherID && teacher instanceof Tutor) {
@@ -60,28 +60,31 @@ public class GUI {
         }
     }
 
-    // Display
+    //Making a Constructor
     public GUI(ArrayList<Teacher> Teachers){
         this.Teachers = Teachers;
 
+        // Creating the main GUI frame
         JFrame frame = new JFrame("GUI");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(500,500);
         frame.setVisible(true);
 
+        // Implementing GridBagLayout for organizing components
         JPanel panel = new JPanel(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(8, 8, 8, 8);
 
+        // Creating a menu bar
         JMenuBar menuBar = new JMenuBar();
         menuBar.setBorder(BorderFactory.createEmptyBorder(6, 15, 6, 15));
         menuBar.setBackground(Color.LIGHT_GRAY);
         frame.setJMenuBar(menuBar);
 
+        // Creating menu items for the menu bar
         JMenu teacherMenu =  new JMenu("Teacher");
         JMenu lecturerMenu =  new JMenu("Lecturer");
         JMenu tutorMenu = new JMenu("Tutor");
-
         JMenuItem showGradeAssignmentInfoItem = new JMenuItem("Grade Assignment");
         JMenuItem addLecturerInfoItem = new JMenuItem("Add Lecturer");
         JMenuItem addTutorInfoItem = new JMenuItem("Add Tutor");
@@ -89,8 +92,7 @@ public class GUI {
         JMenuItem removeTutorInfoItem = new JMenuItem("Remove Tutor");
         JMenuItem displayInfoItem =  new JMenuItem("Display");
 
-        JTable teacherTable = new JTable();
-
+        // Implementing the menu items to the menu bar
         menuBar.add(teacherMenu);
         menuBar.add(lecturerMenu);
         menuBar.add(tutorMenu);
@@ -102,7 +104,6 @@ public class GUI {
         teacherMenu.add(displayInfoItem);
 
         //Initializing the Required Message Labels
-
         JLabel messageLabel = new JLabel("Teachers:");
         JLabel teacherIDLabel = new JLabel("Teacher ID:");
         JLabel teacherNameLabel = new JLabel("Teacher Name:");
@@ -121,7 +122,6 @@ public class GUI {
         JLabel newPerformanceIndexLabel = new JLabel("New Performance Index:");
 
         //Initializing the required textFields
-
         JTextField teacherIDTf = new JTextField(15);
         JTextField teacherNameTf = new JTextField(15);
         JTextField addressTf = new JTextField(15);
@@ -139,13 +139,11 @@ public class GUI {
         JTextField newPerformanceIndexTf = new JTextField(15);
 
         //Initializing the required buttons
-
         JButton addLecturerButton = new JButton("Add Lecturer");
         JButton addTutorButton = new JButton("Add Tutor");
         JButton gradeAssignmentsButton = new JButton("Grade Assignments");
         JButton setSalaryButton = new JButton("Set Salary");
         JButton removeTutorButton = new JButton("Remove Tutor");
-        JButton displayButton = new JButton("Display");
         JButton clearButton = new JButton("Clear");
         JButton directToGradeAssignmentButton = new JButton("Grade Assignment");
         JButton directToSetSalaryButton = new JButton("Set Salary");
@@ -155,7 +153,7 @@ public class GUI {
         JButton directToDisplayButton = new JButton("Display");
         JButton returnButton = new JButton("⇐");
 
-
+        // Adding components to the panel using GridbagConstraints
         gbc.gridx = 2;
         gbc.gridy = 0;
         panel.add(directToAddLecturerButton, gbc);
@@ -178,12 +176,15 @@ public class GUI {
         gbc.gridy = 6;
         panel.add(directToDisplayButton, gbc);
 
+        //Adding the panel to the frame
         frame.add(panel);
+        // Making the frame visible
         frame.setVisible(true);
 
         addLecturerInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -293,7 +294,6 @@ public class GUI {
                 newSalaryTf.setVisible(false);
                 newPerformanceIndexTf.setVisible(false);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -306,7 +306,7 @@ public class GUI {
         directToAddLecturerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                // // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -416,7 +416,6 @@ public class GUI {
                 newSalaryTf.setVisible(false);
                 newPerformanceIndexTf.setVisible(false);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -426,9 +425,11 @@ public class GUI {
             }
         });
 
+        //Adding the functionality of return button
         returnButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 messageLabel.setVisible(false);
                 teacherIDLabel.setVisible(false);
                 teacherNameLabel.setVisible(false);
@@ -437,7 +438,6 @@ public class GUI {
                 employmentStatusLabel.setVisible(false);
                 yearsOfExperienceLabel.setVisible(false);
                 gradedScoreLabel.setVisible(false);
-
 
                 teacherIDTf.setVisible(false);
                 teacherNameTf.setVisible(false);
@@ -467,7 +467,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(false);
                 setSalaryButton.setVisible(false);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(true);
                 directToGradeAssignmentButton.setVisible(true);
                 directToSetSalaryButton.setVisible(true);
                 directToRemoveTutorButton.setVisible(true);
@@ -478,7 +477,8 @@ public class GUI {
                 newPerformanceIndexLabel.setVisible(false);
                 newSalaryTf.setVisible(false);
                 newPerformanceIndexTf.setVisible(false);
-                
+
+                // Clearing the text fields
                 teacherIDTf.setText("");
                 teacherNameTf.setText("");
                 addressTf.setText("");
@@ -499,6 +499,7 @@ public class GUI {
         addTutorInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 messageLabel.setText("Tutor");
                 messageLabel.setVisible(true);
                 teacherIDLabel.setVisible(true);
@@ -543,7 +544,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(false);
                 setSalaryButton.setVisible(false);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -551,6 +551,7 @@ public class GUI {
                 directToAddTutorButton.setVisible(false);
                 directToDisplayButton.setVisible(false);
 
+                // // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -641,6 +642,7 @@ public class GUI {
         directToAddTutorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 messageLabel.setText("Tutor");
                 messageLabel.setVisible(true);
                 teacherIDLabel.setVisible(true);
@@ -685,7 +687,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(false);
                 setSalaryButton.setVisible(false);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -693,6 +694,7 @@ public class GUI {
                 directToAddTutorButton.setVisible(false);
                 directToDisplayButton.setVisible(false);
 
+                // // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -783,6 +785,7 @@ public class GUI {
         showGradeAssignmentInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 messageLabel.setText("Grade Assigment");
                 messageLabel.setVisible(true);
                 teacherIDLabel.setVisible(true);
@@ -827,7 +830,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(true);
                 setSalaryButton.setVisible(false);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -835,6 +837,7 @@ public class GUI {
                 directToAddTutorButton.setVisible(false);
                 directToDisplayButton.setVisible(false);
 
+                // // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -896,6 +899,7 @@ public class GUI {
         directToGradeAssignmentButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 messageLabel.setText("Grade Assigment");
                 messageLabel.setVisible(true);
                 teacherIDLabel.setVisible(true);
@@ -940,7 +944,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(true);
                 setSalaryButton.setVisible(false);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -948,6 +951,7 @@ public class GUI {
                 directToAddTutorButton.setVisible(false);
                 directToDisplayButton.setVisible(false);
 
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -1009,30 +1013,8 @@ public class GUI {
         setSalaryInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                messageLabel.setText("Set Salary");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(false);
-                addressLabel.setVisible(false);
-                workingTypeLabel.setVisible(false);
-                employmentStatusLabel.setVisible(false);
-                yearsOfExperienceLabel.setVisible(false);
-                gradedScoreLabel.setVisible(false);
 
-
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(false);
-                addressTf.setVisible(false);
-                workingTypeTf.setVisible(false);
-                employmentStatusTf.setVisible(false);
-                yearsOfExperienceTf.setVisible(false);
-                gradedScoreTf.setVisible(false);
-
-                newSalaryLabel.setVisible(true);
-                newPerformanceIndexLabel.setVisible(true);
-                newSalaryTf.setVisible(true);
-                newPerformanceIndexTf.setVisible(true);
-
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 addLecturerButton.setVisible(false);
                 clearButton.setVisible(true);
                 returnButton.setVisible(true);
@@ -1053,7 +1035,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(false);
                 setSalaryButton.setVisible(true);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -1061,6 +1042,7 @@ public class GUI {
                 directToAddTutorButton.setVisible(false);
                 directToDisplayButton.setVisible(false);
 
+                // // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -1101,6 +1083,7 @@ public class GUI {
         directToSetSalaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 messageLabel.setText("Set Salary");
                 messageLabel.setVisible(true);
                 teacherIDLabel.setVisible(true);
@@ -1145,7 +1128,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(false);
                 setSalaryButton.setVisible(true);
                 removeTutorButton.setVisible(false);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -1153,6 +1135,7 @@ public class GUI {
                 directToAddTutorButton.setVisible(false);
                 directToDisplayButton.setVisible(false);
 
+                // // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -1193,6 +1176,7 @@ public class GUI {
         removeTutorInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 messageLabel.setText("Remove Tutor");
                 messageLabel.setVisible(true);
                 teacherIDLabel.setVisible(true);
@@ -1237,7 +1221,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(false);
                 setSalaryButton.setVisible(false);
                 removeTutorButton.setVisible(true);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -1245,6 +1228,7 @@ public class GUI {
                 directToAddTutorButton.setVisible(false);
                 directToDisplayButton.setVisible(false);
 
+                // // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -1271,6 +1255,7 @@ public class GUI {
         directToRemoveTutorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Setting the required visibility of the various textfields, messagelabels and buttons
                 messageLabel.setText("Remove Tutor");
                 messageLabel.setVisible(true);
                 teacherIDLabel.setVisible(true);
@@ -1315,7 +1300,6 @@ public class GUI {
                 gradeAssignmentsButton.setVisible(false);
                 setSalaryButton.setVisible(false);
                 removeTutorButton.setVisible(true);
-                displayButton.setVisible(false);
                 directToGradeAssignmentButton.setVisible(false);
                 directToSetSalaryButton.setVisible(false);
                 directToRemoveTutorButton.setVisible(false);
@@ -1323,6 +1307,7 @@ public class GUI {
                 directToAddTutorButton.setVisible(false);
                 directToDisplayButton.setVisible(false);
 
+                // // Adding new components to the panel using GridbagConstraints
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 panel.add(returnButton, gbc);
@@ -1349,6 +1334,7 @@ public class GUI {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Clearing the textfield after the button is pressed
                 teacherIDTf.setText("");
                 teacherNameTf.setText("");
                 addressTf.setText("");
@@ -1365,6 +1351,7 @@ public class GUI {
             }
         });
 
+        // For adding a new lecturer
         addLecturerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1396,6 +1383,7 @@ public class GUI {
             }
         });
 
+        // To add a new Tutor
         addTutorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1430,6 +1418,7 @@ public class GUI {
             }
         });
 
+        //To assign the grades
         gradeAssignmentsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1454,6 +1443,7 @@ public class GUI {
             }
         });
 
+        //to set salary
         setSalaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1476,6 +1466,8 @@ public class GUI {
             }
         });
 
+
+        // To remove tutor
         removeTutorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1489,18 +1481,19 @@ public class GUI {
             }
         });
 
+        //to display the instances of teacher
         directToDisplayButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                // Create a new JFrame to hold the table
+                // Creating a new JFrame to hold the table
                 JFrame frame = new JFrame("Teacher Information");
 
-                // Create a JTable to display the teacher information
+                // Creating a JTable to display the teacher information
                 String[] columnNames = {"Teacher ID", "Teacher Name", "Address", "Working Type", "Employment Status",
                         "Years of Experience", "Graded Score", "Department", "Salary", "Specialization",
-                        "Academic Qualifications", "Performance Index", "Teacher Type"}; // Add "Teacher Type" column
-                Object[][] data = new Object[Teachers.size()][13]; // Assuming you have 13 columns now
+                        "Academic Qualifications", "Performance Index", "Teacher Type"};
+                Object[][] data = new Object[Teachers.size()][13];
 
                 int i = 0;
                 for (Teacher teacher : Teachers) {
@@ -1523,11 +1516,54 @@ public class GUI {
                 }
                 JTable table = new JTable(data, columnNames);
 
-                // Add the table to a JScrollPane
+                // Adding the table to a JScrollPane
                 JScrollPane scrollPane = new JScrollPane(table);
                 frame.add(scrollPane);
 
-                // Set JFrame properties
+                // Setting JFrame properties
+                frame.pack();
+                frame.setLocationRelativeTo(null); // Center the frame
+                frame.setVisible(true);
+            }
+        });
+
+        //to display the instances of teacher
+        displayInfoItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame();
+
+                String[] columnNames ={"Teacher ID", "Teacher Name", "Address", "Working Type", "Employment Status",
+                        "Years of Experience", "Graded Score", "Department", "Salary", "Specialization",
+                        "Academic Qualifications", "Performance Index", "Teacher Type"};
+                Object[][] data = new Object[Teachers.size()][13];
+
+                int i = 0;
+                for (Teacher teacher : Teachers){
+                    String teacherType = "";
+                    if (teacher instanceof Lecturer ){
+                        teacherType = "Lecturer";
+                        data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
+                                teacher.getWorkingType(), teacher.getEmploymentStatus(),
+                                ((Lecturer) teacher).getYearsOfExperience(), ((Lecturer) teacher).getGradedScore(),
+                                ((Lecturer) teacher).getDepartment(), "", "", "", "", teacherType};
+                    }else if (teacher instanceof Tutor){
+                        teacherType = "Tutor";
+                        data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
+                                teacher.getWorkingType(), teacher.getEmploymentStatus(),
+                                "", "", "", ((Tutor) teacher).getSalary(), ((Tutor) teacher).getSpecialization(),
+                                ((Tutor) teacher).getAcademicQualifications(), ((Tutor) teacher).getPerformanceIndex(),
+                                teacherType};
+                    }
+                    i++;
+                }
+                JTable table = new JTable(data, columnNames);
+
+                // Adding the table to a JScrollPane
+                JScrollPane scrollPane = new JScrollPane(table);
+                frame.add(scrollPane);
+
+                // Setting JFrame properties
                 frame.pack();
                 frame.setLocationRelativeTo(null); // Center the frame
                 frame.setVisible(true);
