@@ -71,7 +71,7 @@ public class GUI {
         frame.setVisible(true);
 
         // Implementing GridBagLayout for organizing components
-        JPanel panel = new JPanel(new GridBagLayout());
+        CustomPanel panel = new CustomPanel(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(8, 8, 8, 8);
 
@@ -104,22 +104,22 @@ public class GUI {
         teacherMenu.add(displayInfoItem);
 
         //Initializing the Required Message Labels
-        JLabel messageLabel = new JLabel("Teachers:");
-        JLabel teacherIDLabel = new JLabel("Teacher ID:");
-        JLabel teacherNameLabel = new JLabel("Teacher Name:");
-        JLabel addressLabel = new JLabel("Address:");
-        JLabel workingTypeLabel = new JLabel("Working Type:");
-        JLabel employmentStatusLabel = new JLabel("Employment Status:");
-        JLabel workingHoursLabel =  new JLabel("Working Hours:");
-        JLabel departmentLabel = new JLabel("Department:");
-        JLabel yearsOfExperienceLabel = new JLabel("Years Of Experience:");
-        JLabel gradedScoreLabel = new JLabel("Graded Score:");
-        JLabel salaryLabel = new JLabel("Salary:");
-        JLabel specializationLabel =  new JLabel("Specialization:");
-        JLabel academicQualificationsLabel =  new JLabel("Academic Qualifications:");
-        JLabel performanceIndexLabel = new JLabel("Performance Index:");
-        JLabel newSalaryLabel = new JLabel("New Salary:");
-        JLabel newPerformanceIndexLabel = new JLabel("New Performance Index:");
+        CustomJLabel messageLabel = new CustomJLabel("Teachers:");
+        CustomJLabel teacherIDLabel = new CustomJLabel("Teacher ID:");
+        CustomJLabel teacherNameLabel = new CustomJLabel("Teacher Name:");
+        CustomJLabel addressLabel = new CustomJLabel("Address:");
+        CustomJLabel workingTypeLabel = new CustomJLabel("Working Type:");
+        CustomJLabel employmentStatusLabel = new CustomJLabel("Employment Status:");
+        CustomJLabel workingHoursLabel =  new CustomJLabel("Working Hours:");
+        CustomJLabel departmentLabel = new CustomJLabel("Department:");
+        CustomJLabel yearsOfExperienceLabel = new CustomJLabel("Years Of Experience:");
+        CustomJLabel gradedScoreLabel = new CustomJLabel("Graded Score:");
+        CustomJLabel salaryLabel = new CustomJLabel("Salary:");
+        CustomJLabel specializationLabel =  new CustomJLabel("Specialization:");
+        CustomJLabel academicQualificationsLabel =  new CustomJLabel("Academic Qualifications:");
+        CustomJLabel performanceIndexLabel = new CustomJLabel("Performance Index:");
+        CustomJLabel newSalaryLabel = new CustomJLabel("New Salary:");
+        CustomJLabel newPerformanceIndexLabel = new CustomJLabel("New Performance Index:");
 
         //Initializing the required textFields
         JTextField teacherIDTf = new JTextField(15);
@@ -139,18 +139,18 @@ public class GUI {
         JTextField newPerformanceIndexTf = new JTextField(15);
 
         //Initializing the required buttons
-        JButton addLecturerButton = new JButton("Add Lecturer");
-        JButton addTutorButton = new JButton("Add Tutor");
-        JButton gradeAssignmentsButton = new JButton("Grade Assignments");
-        JButton setSalaryButton = new JButton("Set Salary");
-        JButton removeTutorButton = new JButton("Remove Tutor");
-        JButton clearButton = new JButton("Clear");
-        JButton directToGradeAssignmentButton = new JButton("Grade Assignment");
-        JButton directToSetSalaryButton = new JButton("Set Salary");
-        JButton directToRemoveTutorButton = new JButton("Remove Tutor");
-        JButton directToAddLecturerButton = new JButton("Add Lecturer");
-        JButton directToAddTutorButton =  new JButton("Add Tutor");
-        JButton directToDisplayButton = new JButton("Display");
+        CustomJButton addLecturerButton = new CustomJButton("Add Lecturer");
+        CustomJButton addTutorButton = new CustomJButton("Add Tutor");
+        CustomJButton gradeAssignmentsButton = new CustomJButton("Grade Assignments");
+        CustomJButton setSalaryButton = new CustomJButton("Set Salary");
+        CustomJButton removeTutorButton = new CustomJButton("Remove Tutor");
+        CustomJButton clearButton = new CustomJButton("Clear");
+        CustomJButton directToGradeAssignmentButton = new CustomJButton("Grade Assignment");
+        CustomJButton directToSetSalaryButton = new CustomJButton("Set Salary");
+        CustomJButton directToRemoveTutorButton = new CustomJButton("Remove Tutor");
+        CustomJButton directToAddLecturerButton = new CustomJButton("Add Lecturer");
+        CustomJButton directToAddTutorButton =  new CustomJButton("Add Tutor");
+        CustomJButton directToDisplayButton = new CustomJButton("Display");
         JButton returnButton = new JButton("⇐");
 
         // Adding components to the panel using GridbagConstraints
