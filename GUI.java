@@ -306,122 +306,127 @@ public class GUI {
         directToAddLecturerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // // Adding new components to the panel using GridbagConstraints
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                try{
+                    // // Adding new components to the panel using GridbagConstraints
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    panel.add(returnButton, gbc);
 
-                gbc.gridx = 3;
-                panel.add(messageLabel, gbc);
+                    gbc.gridx = 3;
+                    panel.add(messageLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 1;
+                    panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherIDTf,gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherIDTf,gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 2;
-                panel.add(teacherNameLabel,gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 2;
+                    panel.add(teacherNameLabel,gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherNameTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherNameTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 3;
-                panel.add(addressLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 3;
+                    panel.add(addressLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(addressTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(addressTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 4;
-                panel.add(workingTypeLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 4;
+                    panel.add(workingTypeLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(workingTypeTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(workingTypeTf, gbc);
 
-                gbc.gridx = 3;
-                gbc.gridy = 5;
-                panel.add(addLecturerButton, gbc);
+                    gbc.gridx = 3;
+                    gbc.gridy = 5;
+                    panel.add(addLecturerButton, gbc);
 
-                gbc.gridy = 6;
-                panel.add(clearButton, gbc);
+                    gbc.gridy = 6;
+                    panel.add(clearButton, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 1;
-                panel.add(employmentStatusLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 1;
+                    panel.add(employmentStatusLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(employmentStatusTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(employmentStatusTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 2;
-                panel.add(yearsOfExperienceLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 2;
+                    panel.add(yearsOfExperienceLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(yearsOfExperienceTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(yearsOfExperienceTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 3;
-                panel.add(gradedScoreLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 3;
+                    panel.add(gradedScoreLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(gradedScoreTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(gradedScoreTf, gbc);
 
-                //Setting the required Message labels as visible
-                messageLabel.setText("Lecturer");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(true);
-                addressLabel.setVisible(true);
-                workingTypeLabel.setVisible(true);
-                employmentStatusLabel.setVisible(true);
-                yearsOfExperienceLabel.setVisible(true);
-                gradedScoreLabel.setVisible(true);
+                    //Setting the required Message labels as visible
+                    messageLabel.setText("Lecturer");
+                    messageLabel.setVisible(true);
+                    teacherIDLabel.setVisible(true);
+                    teacherNameLabel.setVisible(true);
+                    addressLabel.setVisible(true);
+                    workingTypeLabel.setVisible(true);
+                    employmentStatusLabel.setVisible(true);
+                    yearsOfExperienceLabel.setVisible(true);
+                    gradedScoreLabel.setVisible(true);
 
-                //Setting the required text fields as visible
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(true);
-                addressTf.setVisible(true);
-                workingTypeTf.setVisible(true);
-                employmentStatusTf.setVisible(true);
-                yearsOfExperienceTf.setVisible(true);
-                gradedScoreTf.setVisible(true);
+                    //Setting the required text fields as visible
+                    teacherIDTf.setVisible(true);
+                    teacherNameTf.setVisible(true);
+                    addressTf.setVisible(true);
+                    workingTypeTf.setVisible(true);
+                    employmentStatusTf.setVisible(true);
+                    yearsOfExperienceTf.setVisible(true);
+                    gradedScoreTf.setVisible(true);
 
-                //Setting the required buttons as visible
-                addLecturerButton.setVisible(true);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
+                    //Setting the required buttons as visible
+                    addLecturerButton.setVisible(true);
+                    clearButton.setVisible(true);
+                    returnButton.setVisible(true);
 
-                //setting the others as invisible
-                addTutorButton.setVisible(false);
-                workingHoursLabel.setVisible(false);
-                departmentLabel.setVisible(false);
-                salaryLabel.setVisible(false);
-                specializationLabel.setVisible(false);
-                academicQualificationsLabel.setVisible(false);
-                performanceIndexLabel.setVisible(false);
-                workingHoursTf.setVisible(false);
-                departmentTf.setVisible(false);
-                salaryTf.setVisible(false);
-                specializationTf.setVisible(false);
-                academicQualificationsTf.setVisible(false);
-                performanceIndexTf.setVisible(false);
-                gradeAssignmentsButton.setVisible(false);
-                setSalaryButton.setVisible(false);
-                newSalaryLabel.setVisible(false);
-                newPerformanceIndexLabel.setVisible(false);
-                newSalaryTf.setVisible(false);
-                newPerformanceIndexTf.setVisible(false);
-                removeTutorButton.setVisible(false);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                    //setting the others as invisible
+                    addTutorButton.setVisible(false);
+                    workingHoursLabel.setVisible(false);
+                    departmentLabel.setVisible(false);
+                    salaryLabel.setVisible(false);
+                    specializationLabel.setVisible(false);
+                    academicQualificationsLabel.setVisible(false);
+                    performanceIndexLabel.setVisible(false);
+                    workingHoursTf.setVisible(false);
+                    departmentTf.setVisible(false);
+                    salaryTf.setVisible(false);
+                    specializationTf.setVisible(false);
+                    academicQualificationsTf.setVisible(false);
+                    performanceIndexTf.setVisible(false);
+                    gradeAssignmentsButton.setVisible(false);
+                    setSalaryButton.setVisible(false);
+                    newSalaryLabel.setVisible(false);
+                    newPerformanceIndexLabel.setVisible(false);
+                    newSalaryTf.setVisible(false);
+                    newPerformanceIndexTf.setVisible(false);
+                    removeTutorButton.setVisible(false);
+                    directToGradeAssignmentButton.setVisible(false);
+                    directToSetSalaryButton.setVisible(false);
+                    directToRemoveTutorButton.setVisible(false);
+                    directToAddLecturerButton.setVisible(false);
+                    directToAddTutorButton.setVisible(false);
+                    directToDisplayButton.setVisible(false);
+                }catch (Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             }
         });
 
@@ -430,68 +435,74 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Setting the required visibility of the various textfields, messagelabels and buttons
-                messageLabel.setVisible(false);
-                teacherIDLabel.setVisible(false);
-                teacherNameLabel.setVisible(false);
-                addressLabel.setVisible(false);
-                workingTypeLabel.setVisible(false);
-                employmentStatusLabel.setVisible(false);
-                yearsOfExperienceLabel.setVisible(false);
-                gradedScoreLabel.setVisible(false);
+                try{
+                    messageLabel.setVisible(false);
+                    teacherIDLabel.setVisible(false);
+                    teacherNameLabel.setVisible(false);
+                    addressLabel.setVisible(false);
+                    workingTypeLabel.setVisible(false);
+                    employmentStatusLabel.setVisible(false);
+                    yearsOfExperienceLabel.setVisible(false);
+                    gradedScoreLabel.setVisible(false);
 
-                teacherIDTf.setVisible(false);
-                teacherNameTf.setVisible(false);
-                addressTf.setVisible(false);
-                workingTypeTf.setVisible(false);
-                employmentStatusTf.setVisible(false);
-                yearsOfExperienceTf.setVisible(false);
-                gradedScoreTf.setVisible(false);
+                    teacherIDTf.setVisible(false);
+                    teacherNameTf.setVisible(false);
+                    addressTf.setVisible(false);
+                    workingTypeTf.setVisible(false);
+                    employmentStatusTf.setVisible(false);
+                    yearsOfExperienceTf.setVisible(false);
+                    gradedScoreTf.setVisible(false);
 
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(false);
-                returnButton.setVisible(false);
+                    addLecturerButton.setVisible(false);
+                    clearButton.setVisible(false);
+                    returnButton.setVisible(false);
 
-                addTutorButton.setVisible(false);
-                workingHoursLabel.setVisible(false);
-                departmentLabel.setVisible(false);
-                salaryLabel.setVisible(false);
-                specializationLabel.setVisible(false);
-                academicQualificationsLabel.setVisible(false);
-                performanceIndexLabel.setVisible(false);
-                workingHoursTf.setVisible(false);
-                departmentTf.setVisible(false);
-                salaryTf.setVisible(false);
-                specializationTf.setVisible(false);
-                academicQualificationsTf.setVisible(false);
-                performanceIndexTf.setVisible(false);
-                gradeAssignmentsButton.setVisible(false);
-                setSalaryButton.setVisible(false);
-                removeTutorButton.setVisible(false);
-                directToGradeAssignmentButton.setVisible(true);
-                directToSetSalaryButton.setVisible(true);
-                directToRemoveTutorButton.setVisible(true);
-                directToAddLecturerButton.setVisible(true);
-                directToAddTutorButton.setVisible(true);
-                directToDisplayButton.setVisible(true);
-                newSalaryLabel.setVisible(false);
-                newPerformanceIndexLabel.setVisible(false);
-                newSalaryTf.setVisible(false);
-                newPerformanceIndexTf.setVisible(false);
+                    addTutorButton.setVisible(false);
+                    workingHoursLabel.setVisible(false);
+                    departmentLabel.setVisible(false);
+                    salaryLabel.setVisible(false);
+                    specializationLabel.setVisible(false);
+                    academicQualificationsLabel.setVisible(false);
+                    performanceIndexLabel.setVisible(false);
+                    workingHoursTf.setVisible(false);
+                    departmentTf.setVisible(false);
+                    salaryTf.setVisible(false);
+                    specializationTf.setVisible(false);
+                    academicQualificationsTf.setVisible(false);
+                    performanceIndexTf.setVisible(false);
+                    gradeAssignmentsButton.setVisible(false);
+                    setSalaryButton.setVisible(false);
+                    removeTutorButton.setVisible(false);
+                    directToGradeAssignmentButton.setVisible(true);
+                    directToSetSalaryButton.setVisible(true);
+                    directToRemoveTutorButton.setVisible(true);
+                    directToAddLecturerButton.setVisible(true);
+                    directToAddTutorButton.setVisible(true);
+                    directToDisplayButton.setVisible(true);
+                    newSalaryLabel.setVisible(false);
+                    newPerformanceIndexLabel.setVisible(false);
+                    newSalaryTf.setVisible(false);
+                    newPerformanceIndexTf.setVisible(false);
 
-                // Clearing the text fields
-                teacherIDTf.setText("");
-                teacherNameTf.setText("");
-                addressTf.setText("");
-                workingTypeTf.setText("");
-                employmentStatusTf.setText("");
-                workingHoursTf.setText("");
-                departmentTf.setText("");
-                yearsOfExperienceTf.setText("");
-                gradedScoreTf.setText("");
-                salaryTf.setText("");
-                specializationTf.setText("");
-                academicQualificationsTf.setText("");
-                performanceIndexTf.setText("");
+                    // Clearing the text fields
+                    teacherIDTf.setText("");
+                    teacherNameTf.setText("");
+                    addressTf.setText("");
+                    workingTypeTf.setText("");
+                    employmentStatusTf.setText("");
+                    workingHoursTf.setText("");
+                    departmentTf.setText("");
+                    yearsOfExperienceTf.setText("");
+                    gradedScoreTf.setText("");
+                    salaryTf.setText("");
+                    specializationTf.setText("");
+                    academicQualificationsTf.setText("");
+                    performanceIndexTf.setText("");
+
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
 
             }
         });
@@ -499,142 +510,148 @@ public class GUI {
         addTutorInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                messageLabel.setText("Tutor");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(true);
-                addressLabel.setVisible(true);
-                workingTypeLabel.setVisible(true);
-                employmentStatusLabel.setVisible(true);
-                yearsOfExperienceLabel.setVisible(false);
-                gradedScoreLabel.setVisible(false);
+                try{
+                    //Setting the required visibility of the various textfields, messagelabels and buttons
+                    messageLabel.setText("Tutor");
+                    messageLabel.setVisible(true);
+                    teacherIDLabel.setVisible(true);
+                    teacherNameLabel.setVisible(true);
+                    addressLabel.setVisible(true);
+                    workingTypeLabel.setVisible(true);
+                    employmentStatusLabel.setVisible(true);
+                    yearsOfExperienceLabel.setVisible(false);
+                    gradedScoreLabel.setVisible(false);
 
-                newSalaryLabel.setVisible(false);
-                newPerformanceIndexLabel.setVisible(false);
-                newSalaryTf.setVisible(false);
-                newPerformanceIndexTf.setVisible(false);
+                    newSalaryLabel.setVisible(false);
+                    newPerformanceIndexLabel.setVisible(false);
+                    newSalaryTf.setVisible(false);
+                    newPerformanceIndexTf.setVisible(false);
 
 
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(true);
-                addressTf.setVisible(true);
-                workingTypeTf.setVisible(true);
-                employmentStatusTf.setVisible(true);
-                yearsOfExperienceTf.setVisible(false);
-                gradedScoreTf.setVisible(false);
+                    teacherIDTf.setVisible(true);
+                    teacherNameTf.setVisible(true);
+                    addressTf.setVisible(true);
+                    workingTypeTf.setVisible(true);
+                    employmentStatusTf.setVisible(true);
+                    yearsOfExperienceTf.setVisible(false);
+                    gradedScoreTf.setVisible(false);
 
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
+                    addLecturerButton.setVisible(false);
+                    clearButton.setVisible(true);
+                    returnButton.setVisible(true);
 
-                addTutorButton.setVisible(true);
-                workingHoursLabel.setVisible(true);
-                departmentLabel.setVisible(false);
-                salaryLabel.setVisible(true);
-                specializationLabel.setVisible(true);
-                academicQualificationsLabel.setVisible(true);
-                performanceIndexLabel.setVisible(true);
-                workingHoursTf.setVisible(true);
-                departmentTf.setVisible(false);
-                salaryTf.setVisible(true);
-                specializationTf.setVisible(true);
-                academicQualificationsTf.setVisible(true);
-                performanceIndexTf.setVisible(true);
-                gradeAssignmentsButton.setVisible(false);
-                setSalaryButton.setVisible(false);
-                removeTutorButton.setVisible(false);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                    addTutorButton.setVisible(true);
+                    workingHoursLabel.setVisible(true);
+                    departmentLabel.setVisible(false);
+                    salaryLabel.setVisible(true);
+                    specializationLabel.setVisible(true);
+                    academicQualificationsLabel.setVisible(true);
+                    performanceIndexLabel.setVisible(true);
+                    workingHoursTf.setVisible(true);
+                    departmentTf.setVisible(false);
+                    salaryTf.setVisible(true);
+                    specializationTf.setVisible(true);
+                    academicQualificationsTf.setVisible(true);
+                    performanceIndexTf.setVisible(true);
+                    gradeAssignmentsButton.setVisible(false);
+                    setSalaryButton.setVisible(false);
+                    removeTutorButton.setVisible(false);
+                    directToGradeAssignmentButton.setVisible(false);
+                    directToSetSalaryButton.setVisible(false);
+                    directToRemoveTutorButton.setVisible(false);
+                    directToAddLecturerButton.setVisible(false);
+                    directToAddTutorButton.setVisible(false);
+                    directToDisplayButton.setVisible(false);
 
-                // // Adding new components to the panel using GridbagConstraints
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                    // // Adding new components to the panel using GridbagConstraints
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    panel.add(returnButton, gbc);
 
-                gbc.gridx = 3;
-                panel.add(messageLabel, gbc);
+                    gbc.gridx = 3;
+                    panel.add(messageLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 1;
+                    panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherIDTf,gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherIDTf,gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 2;
-                panel.add(teacherNameLabel,gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 2;
+                    panel.add(teacherNameLabel,gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherNameTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherNameTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 3;
-                panel.add(addressLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 3;
+                    panel.add(addressLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(addressTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(addressTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 4;
-                panel.add(workingTypeLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 4;
+                    panel.add(workingTypeLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(workingTypeTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(workingTypeTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 5;
-                panel.add(performanceIndexLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 5;
+                    panel.add(performanceIndexLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(performanceIndexTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(performanceIndexTf, gbc);
 
-                gbc.gridx = 3;
-                gbc.gridy = 6;
-                panel.add(addTutorButton, gbc);
+                    gbc.gridx = 3;
+                    gbc.gridy = 6;
+                    panel.add(addTutorButton, gbc);
 
-                gbc.gridy = 7;
-                panel.add(clearButton, gbc);
+                    gbc.gridy = 7;
+                    panel.add(clearButton, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 1;
-                panel.add(employmentStatusLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 1;
+                    panel.add(employmentStatusLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(employmentStatusTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(employmentStatusTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 2;
-                panel.add(workingHoursLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 2;
+                    panel.add(workingHoursLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(workingHoursTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(workingHoursTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 3;
-                panel.add(salaryLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 3;
+                    panel.add(salaryLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(salaryTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(salaryTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 4;
-                panel.add(specializationLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 4;
+                    panel.add(specializationLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(specializationTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(specializationTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 5;
-                panel.add(academicQualificationsLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 5;
+                    panel.add(academicQualificationsLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(academicQualificationsTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(academicQualificationsTf, gbc);
+
+                }catch (Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
 
             }
         });
@@ -642,712 +659,757 @@ public class GUI {
         directToAddTutorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                messageLabel.setText("Tutor");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(true);
-                addressLabel.setVisible(true);
-                workingTypeLabel.setVisible(true);
-                employmentStatusLabel.setVisible(true);
-                yearsOfExperienceLabel.setVisible(false);
-                gradedScoreLabel.setVisible(false);
+                try{
+                    //Setting the required visibility of the various textfields, messagelabels and buttons
+                    messageLabel.setText("Tutor");
+                    messageLabel.setVisible(true);
+                    teacherIDLabel.setVisible(true);
+                    teacherNameLabel.setVisible(true);
+                    addressLabel.setVisible(true);
+                    workingTypeLabel.setVisible(true);
+                    employmentStatusLabel.setVisible(true);
+                    yearsOfExperienceLabel.setVisible(false);
+                    gradedScoreLabel.setVisible(false);
 
-                newSalaryLabel.setVisible(false);
-                newPerformanceIndexLabel.setVisible(false);
-                newSalaryTf.setVisible(false);
-                newPerformanceIndexTf.setVisible(false);
+                    newSalaryLabel.setVisible(false);
+                    newPerformanceIndexLabel.setVisible(false);
+                    newSalaryTf.setVisible(false);
+                    newPerformanceIndexTf.setVisible(false);
 
 
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(true);
-                addressTf.setVisible(true);
-                workingTypeTf.setVisible(true);
-                employmentStatusTf.setVisible(true);
-                yearsOfExperienceTf.setVisible(false);
-                gradedScoreTf.setVisible(false);
+                    teacherIDTf.setVisible(true);
+                    teacherNameTf.setVisible(true);
+                    addressTf.setVisible(true);
+                    workingTypeTf.setVisible(true);
+                    employmentStatusTf.setVisible(true);
+                    yearsOfExperienceTf.setVisible(false);
+                    gradedScoreTf.setVisible(false);
 
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
+                    addLecturerButton.setVisible(false);
+                    clearButton.setVisible(true);
+                    returnButton.setVisible(true);
 
-                addTutorButton.setVisible(true);
-                workingHoursLabel.setVisible(true);
-                departmentLabel.setVisible(false);
-                salaryLabel.setVisible(true);
-                specializationLabel.setVisible(true);
-                academicQualificationsLabel.setVisible(true);
-                performanceIndexLabel.setVisible(true);
-                workingHoursTf.setVisible(true);
-                departmentTf.setVisible(false);
-                salaryTf.setVisible(true);
-                specializationTf.setVisible(true);
-                academicQualificationsTf.setVisible(true);
-                performanceIndexTf.setVisible(true);
-                gradeAssignmentsButton.setVisible(false);
-                setSalaryButton.setVisible(false);
-                removeTutorButton.setVisible(false);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                    addTutorButton.setVisible(true);
+                    workingHoursLabel.setVisible(true);
+                    departmentLabel.setVisible(false);
+                    salaryLabel.setVisible(true);
+                    specializationLabel.setVisible(true);
+                    academicQualificationsLabel.setVisible(true);
+                    performanceIndexLabel.setVisible(true);
+                    workingHoursTf.setVisible(true);
+                    departmentTf.setVisible(false);
+                    salaryTf.setVisible(true);
+                    specializationTf.setVisible(true);
+                    academicQualificationsTf.setVisible(true);
+                    performanceIndexTf.setVisible(true);
+                    gradeAssignmentsButton.setVisible(false);
+                    setSalaryButton.setVisible(false);
+                    removeTutorButton.setVisible(false);
+                    directToGradeAssignmentButton.setVisible(false);
+                    directToSetSalaryButton.setVisible(false);
+                    directToRemoveTutorButton.setVisible(false);
+                    directToAddLecturerButton.setVisible(false);
+                    directToAddTutorButton.setVisible(false);
+                    directToDisplayButton.setVisible(false);
 
-                // // Adding new components to the panel using GridbagConstraints
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                    // // Adding new components to the panel using GridbagConstraints
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    panel.add(returnButton, gbc);
 
-                gbc.gridx = 3;
-                panel.add(messageLabel, gbc);
+                    gbc.gridx = 3;
+                    panel.add(messageLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 1;
+                    panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherIDTf,gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherIDTf,gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 2;
-                panel.add(teacherNameLabel,gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 2;
+                    panel.add(teacherNameLabel,gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherNameTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherNameTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 3;
-                panel.add(addressLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 3;
+                    panel.add(addressLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(addressTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(addressTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 4;
-                panel.add(workingTypeLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 4;
+                    panel.add(workingTypeLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(workingTypeTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(workingTypeTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 5;
-                panel.add(performanceIndexLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 5;
+                    panel.add(performanceIndexLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(performanceIndexTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(performanceIndexTf, gbc);
 
-                gbc.gridx = 3;
-                gbc.gridy = 6;
-                panel.add(addTutorButton, gbc);
+                    gbc.gridx = 3;
+                    gbc.gridy = 6;
+                    panel.add(addTutorButton, gbc);
 
-                gbc.gridy = 7;
-                panel.add(clearButton, gbc);
+                    gbc.gridy = 7;
+                    panel.add(clearButton, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 1;
-                panel.add(employmentStatusLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 1;
+                    panel.add(employmentStatusLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(employmentStatusTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(employmentStatusTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 2;
-                panel.add(workingHoursLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 2;
+                    panel.add(workingHoursLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(workingHoursTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(workingHoursTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 3;
-                panel.add(salaryLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 3;
+                    panel.add(salaryLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(salaryTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(salaryTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 4;
-                panel.add(specializationLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 4;
+                    panel.add(specializationLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(specializationTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(specializationTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 5;
-                panel.add(academicQualificationsLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 5;
+                    panel.add(academicQualificationsLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(academicQualificationsTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(academicQualificationsTf, gbc);
 
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             }
         });
 
         showGradeAssignmentInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                messageLabel.setText("Grade Assigment");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(false);
-                addressLabel.setVisible(false);
-                workingTypeLabel.setVisible(false);
-                employmentStatusLabel.setVisible(false);
-                yearsOfExperienceLabel.setVisible(true);
-                gradedScoreLabel.setVisible(true);
+                try{
+                    //Setting the required visibility of the various textfields, messagelabels and buttons
+                    messageLabel.setText("Grade Assigment");
+                    messageLabel.setVisible(true);
+                    teacherIDLabel.setVisible(true);
+                    teacherNameLabel.setVisible(false);
+                    addressLabel.setVisible(false);
+                    workingTypeLabel.setVisible(false);
+                    employmentStatusLabel.setVisible(false);
+                    yearsOfExperienceLabel.setVisible(true);
+                    gradedScoreLabel.setVisible(true);
 
 
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(false);
-                addressTf.setVisible(false);
-                workingTypeTf.setVisible(false);
-                employmentStatusTf.setVisible(false);
-                yearsOfExperienceTf.setVisible(true);
-                gradedScoreTf.setVisible(true);
+                    teacherIDTf.setVisible(true);
+                    teacherNameTf.setVisible(false);
+                    addressTf.setVisible(false);
+                    workingTypeTf.setVisible(false);
+                    employmentStatusTf.setVisible(false);
+                    yearsOfExperienceTf.setVisible(true);
+                    gradedScoreTf.setVisible(true);
 
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
-                newSalaryLabel.setVisible(false);
-                newPerformanceIndexLabel.setVisible(false);
-                newSalaryTf.setVisible(false);
-                newPerformanceIndexTf.setVisible(false);
+                    addLecturerButton.setVisible(false);
+                    clearButton.setVisible(true);
+                    returnButton.setVisible(true);
+                    newSalaryLabel.setVisible(false);
+                    newPerformanceIndexLabel.setVisible(false);
+                    newSalaryTf.setVisible(false);
+                    newPerformanceIndexTf.setVisible(false);
 
 
-                addTutorButton.setVisible(false);
-                workingHoursLabel.setVisible(false);
-                departmentLabel.setVisible(true);
-                salaryLabel.setVisible(false);
-                specializationLabel.setVisible(false);
-                academicQualificationsLabel.setVisible(false);
-                performanceIndexLabel.setVisible(false);
-                workingHoursTf.setVisible(false);
-                departmentTf.setVisible(true);
-                salaryTf.setVisible(false);
-                specializationTf.setVisible(false);
-                academicQualificationsTf.setVisible(false);
-                performanceIndexTf.setVisible(false);
-                gradeAssignmentsButton.setVisible(true);
-                setSalaryButton.setVisible(false);
-                removeTutorButton.setVisible(false);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                    addTutorButton.setVisible(false);
+                    workingHoursLabel.setVisible(false);
+                    departmentLabel.setVisible(true);
+                    salaryLabel.setVisible(false);
+                    specializationLabel.setVisible(false);
+                    academicQualificationsLabel.setVisible(false);
+                    performanceIndexLabel.setVisible(false);
+                    workingHoursTf.setVisible(false);
+                    departmentTf.setVisible(true);
+                    salaryTf.setVisible(false);
+                    specializationTf.setVisible(false);
+                    academicQualificationsTf.setVisible(false);
+                    performanceIndexTf.setVisible(false);
+                    gradeAssignmentsButton.setVisible(true);
+                    setSalaryButton.setVisible(false);
+                    removeTutorButton.setVisible(false);
+                    directToGradeAssignmentButton.setVisible(false);
+                    directToSetSalaryButton.setVisible(false);
+                    directToRemoveTutorButton.setVisible(false);
+                    directToAddLecturerButton.setVisible(false);
+                    directToAddTutorButton.setVisible(false);
+                    directToDisplayButton.setVisible(false);
 
-                // // Adding new components to the panel using GridbagConstraints
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                    // // Adding new components to the panel using GridbagConstraints
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    panel.add(returnButton, gbc);
 
-                gbc.gridx = 3;
-                panel.add(messageLabel, gbc);
+                    gbc.gridx = 3;
+                    panel.add(messageLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 1;
+                    panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherIDTf,gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherIDTf,gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 2;
-                panel.add(gradedScoreLabel,gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 2;
+                    panel.add(gradedScoreLabel,gbc);
 
-                gbc.gridx = 2;
-                panel.add(gradedScoreTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(gradedScoreTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 3;
-                panel.add(addressLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 3;
+                    panel.add(addressLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(addressTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(addressTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 4;
-                panel.add(workingTypeLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 4;
+                    panel.add(workingTypeLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(workingTypeTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(workingTypeTf, gbc);
 
-                gbc.gridx = 3;
-                gbc.gridy = 3;
-                panel.add(gradeAssignmentsButton, gbc);
+                    gbc.gridx = 3;
+                    gbc.gridy = 3;
+                    panel.add(gradeAssignmentsButton, gbc);
 
-                gbc.gridy = 4;
-                panel.add(clearButton, gbc);
+                    gbc.gridy = 4;
+                    panel.add(clearButton, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 1;
-                panel.add(departmentLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 1;
+                    panel.add(departmentLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(departmentTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(departmentTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 2;
-                panel.add(yearsOfExperienceLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 2;
+                    panel.add(yearsOfExperienceLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(yearsOfExperienceTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(yearsOfExperienceTf, gbc);
+
+                }catch (Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             }
         });
 
         directToGradeAssignmentButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                messageLabel.setText("Grade Assigment");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(false);
-                addressLabel.setVisible(false);
-                workingTypeLabel.setVisible(false);
-                employmentStatusLabel.setVisible(false);
-                yearsOfExperienceLabel.setVisible(true);
-                gradedScoreLabel.setVisible(true);
+                try{
+                    //Setting the required visibility of the various textfields, messagelabels and buttons
+                    messageLabel.setText("Grade Assigment");
+                    messageLabel.setVisible(true);
+                    teacherIDLabel.setVisible(true);
+                    teacherNameLabel.setVisible(false);
+                    addressLabel.setVisible(false);
+                    workingTypeLabel.setVisible(false);
+                    employmentStatusLabel.setVisible(false);
+                    yearsOfExperienceLabel.setVisible(true);
+                    gradedScoreLabel.setVisible(true);
 
 
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(false);
-                addressTf.setVisible(false);
-                workingTypeTf.setVisible(false);
-                employmentStatusTf.setVisible(false);
-                yearsOfExperienceTf.setVisible(true);
-                gradedScoreTf.setVisible(true);
+                    teacherIDTf.setVisible(true);
+                    teacherNameTf.setVisible(false);
+                    addressTf.setVisible(false);
+                    workingTypeTf.setVisible(false);
+                    employmentStatusTf.setVisible(false);
+                    yearsOfExperienceTf.setVisible(true);
+                    gradedScoreTf.setVisible(true);
 
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
-                newSalaryLabel.setVisible(false);
-                newPerformanceIndexLabel.setVisible(false);
-                newSalaryTf.setVisible(false);
-                newPerformanceIndexTf.setVisible(false);
+                    addLecturerButton.setVisible(false);
+                    clearButton.setVisible(true);
+                    returnButton.setVisible(true);
+                    newSalaryLabel.setVisible(false);
+                    newPerformanceIndexLabel.setVisible(false);
+                    newSalaryTf.setVisible(false);
+                    newPerformanceIndexTf.setVisible(false);
 
 
-                addTutorButton.setVisible(false);
-                workingHoursLabel.setVisible(false);
-                departmentLabel.setVisible(true);
-                salaryLabel.setVisible(false);
-                specializationLabel.setVisible(false);
-                academicQualificationsLabel.setVisible(false);
-                performanceIndexLabel.setVisible(false);
-                workingHoursTf.setVisible(false);
-                departmentTf.setVisible(true);
-                salaryTf.setVisible(false);
-                specializationTf.setVisible(false);
-                academicQualificationsTf.setVisible(false);
-                performanceIndexTf.setVisible(false);
-                gradeAssignmentsButton.setVisible(true);
-                setSalaryButton.setVisible(false);
-                removeTutorButton.setVisible(false);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                    addTutorButton.setVisible(false);
+                    workingHoursLabel.setVisible(false);
+                    departmentLabel.setVisible(true);
+                    salaryLabel.setVisible(false);
+                    specializationLabel.setVisible(false);
+                    academicQualificationsLabel.setVisible(false);
+                    performanceIndexLabel.setVisible(false);
+                    workingHoursTf.setVisible(false);
+                    departmentTf.setVisible(true);
+                    salaryTf.setVisible(false);
+                    specializationTf.setVisible(false);
+                    academicQualificationsTf.setVisible(false);
+                    performanceIndexTf.setVisible(false);
+                    gradeAssignmentsButton.setVisible(true);
+                    setSalaryButton.setVisible(false);
+                    removeTutorButton.setVisible(false);
+                    directToGradeAssignmentButton.setVisible(false);
+                    directToSetSalaryButton.setVisible(false);
+                    directToRemoveTutorButton.setVisible(false);
+                    directToAddLecturerButton.setVisible(false);
+                    directToAddTutorButton.setVisible(false);
+                    directToDisplayButton.setVisible(false);
 
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                    //Setting the required visibility of the various textfields, messagelabels and buttons
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    panel.add(returnButton, gbc);
 
-                gbc.gridx = 3;
-                panel.add(messageLabel, gbc);
+                    gbc.gridx = 3;
+                    panel.add(messageLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 1;
+                    panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherIDTf,gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherIDTf,gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 2;
-                panel.add(gradedScoreLabel,gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 2;
+                    panel.add(gradedScoreLabel,gbc);
 
-                gbc.gridx = 2;
-                panel.add(gradedScoreTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(gradedScoreTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 3;
-                panel.add(addressLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 3;
+                    panel.add(addressLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(addressTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(addressTf, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 4;
-                panel.add(workingTypeLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 4;
+                    panel.add(workingTypeLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(workingTypeTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(workingTypeTf, gbc);
 
-                gbc.gridx = 3;
-                gbc.gridy = 3;
-                panel.add(gradeAssignmentsButton, gbc);
+                    gbc.gridx = 3;
+                    gbc.gridy = 3;
+                    panel.add(gradeAssignmentsButton, gbc);
 
-                gbc.gridy = 4;
-                panel.add(clearButton, gbc);
+                    gbc.gridy = 4;
+                    panel.add(clearButton, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 1;
-                panel.add(departmentLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 1;
+                    panel.add(departmentLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(departmentTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(departmentTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 2;
-                panel.add(yearsOfExperienceLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 2;
+                    panel.add(yearsOfExperienceLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(yearsOfExperienceTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(yearsOfExperienceTf, gbc);
+
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             }
         });
 
         setSalaryInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try{
+                    //Setting the required visibility of the various textfields, messagelabels and buttons
+                    addLecturerButton.setVisible(false);
+                    clearButton.setVisible(true);
+                    returnButton.setVisible(true);
 
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
+                    addTutorButton.setVisible(false);
+                    workingHoursLabel.setVisible(false);
+                    departmentLabel.setVisible(false);
+                    salaryLabel.setVisible(false);
+                    specializationLabel.setVisible(false);
+                    academicQualificationsLabel.setVisible(false);
+                    performanceIndexLabel.setVisible(false);
+                    workingHoursTf.setVisible(false);
+                    departmentTf.setVisible(false);
+                    salaryTf.setVisible(false);
+                    specializationTf.setVisible(false);
+                    academicQualificationsTf.setVisible(false);
+                    performanceIndexTf.setVisible(false);
+                    gradeAssignmentsButton.setVisible(false);
+                    setSalaryButton.setVisible(true);
+                    removeTutorButton.setVisible(false);
+                    directToGradeAssignmentButton.setVisible(false);
+                    directToSetSalaryButton.setVisible(false);
+                    directToRemoveTutorButton.setVisible(false);
+                    directToAddLecturerButton.setVisible(false);
+                    directToAddTutorButton.setVisible(false);
+                    directToDisplayButton.setVisible(false);
 
-                addTutorButton.setVisible(false);
-                workingHoursLabel.setVisible(false);
-                departmentLabel.setVisible(false);
-                salaryLabel.setVisible(false);
-                specializationLabel.setVisible(false);
-                academicQualificationsLabel.setVisible(false);
-                performanceIndexLabel.setVisible(false);
-                workingHoursTf.setVisible(false);
-                departmentTf.setVisible(false);
-                salaryTf.setVisible(false);
-                specializationTf.setVisible(false);
-                academicQualificationsTf.setVisible(false);
-                performanceIndexTf.setVisible(false);
-                gradeAssignmentsButton.setVisible(false);
-                setSalaryButton.setVisible(true);
-                removeTutorButton.setVisible(false);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                    // // Adding new components to the panel using GridbagConstraints
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    panel.add(returnButton, gbc);
 
-                // // Adding new components to the panel using GridbagConstraints
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                    gbc.gridx = 3;
+                    panel.add(messageLabel, gbc);
 
-                gbc.gridx = 3;
-                panel.add(messageLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 1;
+                    panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherIDTf,gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherIDTf,gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 2;
+                    panel.add(newSalaryLabel,gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 2;
-                panel.add(newSalaryLabel,gbc);
+                    gbc.gridx = 2;
+                    panel.add(newSalaryTf, gbc);
 
-                gbc.gridx = 2;
-                panel.add(newSalaryTf, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 1;
+                    panel.add(newPerformanceIndexLabel, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 1;
-                panel.add(newPerformanceIndexLabel, gbc);
+                    gbc.gridx = 5;
+                    panel.add(newPerformanceIndexTf, gbc);
 
-                gbc.gridx = 5;
-                panel.add(newPerformanceIndexTf, gbc);
+                    gbc.gridx = 3;
+                    gbc.gridy = 3;
+                    panel.add(gradeAssignmentsButton, gbc);
 
-                gbc.gridx = 3;
-                gbc.gridy = 3;
-                panel.add(gradeAssignmentsButton, gbc);
+                    gbc.gridy = 4;
+                    panel.add(clearButton, gbc);
 
-                gbc.gridy = 4;
-                panel.add(clearButton, gbc);
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             }
         });
 
         directToSetSalaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                messageLabel.setText("Set Salary");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(false);
-                addressLabel.setVisible(false);
-                workingTypeLabel.setVisible(false);
-                employmentStatusLabel.setVisible(false);
-                yearsOfExperienceLabel.setVisible(false);
-                gradedScoreLabel.setVisible(false);
+                try{
+                    //Setting the required visibility of the various textfields, messagelabels and buttons
+                    messageLabel.setText("Set Salary");
+                    messageLabel.setVisible(true);
+                    teacherIDLabel.setVisible(true);
+                    teacherNameLabel.setVisible(false);
+                    addressLabel.setVisible(false);
+                    workingTypeLabel.setVisible(false);
+                    employmentStatusLabel.setVisible(false);
+                    yearsOfExperienceLabel.setVisible(false);
+                    gradedScoreLabel.setVisible(false);
 
 
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(false);
-                addressTf.setVisible(false);
-                workingTypeTf.setVisible(false);
-                employmentStatusTf.setVisible(false);
-                yearsOfExperienceTf.setVisible(false);
-                gradedScoreTf.setVisible(false);
+                    teacherIDTf.setVisible(true);
+                    teacherNameTf.setVisible(false);
+                    addressTf.setVisible(false);
+                    workingTypeTf.setVisible(false);
+                    employmentStatusTf.setVisible(false);
+                    yearsOfExperienceTf.setVisible(false);
+                    gradedScoreTf.setVisible(false);
 
-                newSalaryLabel.setVisible(true);
-                newPerformanceIndexLabel.setVisible(true);
-                newSalaryTf.setVisible(true);
-                newPerformanceIndexTf.setVisible(true);
+                    newSalaryLabel.setVisible(true);
+                    newPerformanceIndexLabel.setVisible(true);
+                    newSalaryTf.setVisible(true);
+                    newPerformanceIndexTf.setVisible(true);
 
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
+                    addLecturerButton.setVisible(false);
+                    clearButton.setVisible(true);
+                    returnButton.setVisible(true);
 
-                addTutorButton.setVisible(false);
-                workingHoursLabel.setVisible(false);
-                departmentLabel.setVisible(false);
-                salaryLabel.setVisible(false);
-                specializationLabel.setVisible(false);
-                academicQualificationsLabel.setVisible(false);
-                performanceIndexLabel.setVisible(false);
-                workingHoursTf.setVisible(false);
-                departmentTf.setVisible(false);
-                salaryTf.setVisible(false);
-                specializationTf.setVisible(false);
-                academicQualificationsTf.setVisible(false);
-                performanceIndexTf.setVisible(false);
-                gradeAssignmentsButton.setVisible(false);
-                setSalaryButton.setVisible(true);
-                removeTutorButton.setVisible(false);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                    addTutorButton.setVisible(false);
+                    workingHoursLabel.setVisible(false);
+                    departmentLabel.setVisible(false);
+                    salaryLabel.setVisible(false);
+                    specializationLabel.setVisible(false);
+                    academicQualificationsLabel.setVisible(false);
+                    performanceIndexLabel.setVisible(false);
+                    workingHoursTf.setVisible(false);
+                    departmentTf.setVisible(false);
+                    salaryTf.setVisible(false);
+                    specializationTf.setVisible(false);
+                    academicQualificationsTf.setVisible(false);
+                    performanceIndexTf.setVisible(false);
+                    gradeAssignmentsButton.setVisible(false);
+                    setSalaryButton.setVisible(true);
+                    removeTutorButton.setVisible(false);
+                    directToGradeAssignmentButton.setVisible(false);
+                    directToSetSalaryButton.setVisible(false);
+                    directToRemoveTutorButton.setVisible(false);
+                    directToAddLecturerButton.setVisible(false);
+                    directToAddTutorButton.setVisible(false);
+                    directToDisplayButton.setVisible(false);
 
-                // // Adding new components to the panel using GridbagConstraints
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                    // // Adding new components to the panel using GridbagConstraints
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    panel.add(returnButton, gbc);
 
-                gbc.gridx = 3;
-                panel.add(messageLabel, gbc);
+                    gbc.gridx = 3;
+                    panel.add(messageLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 1;
+                    panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 2;
-                panel.add(teacherIDTf,gbc);
+                    gbc.gridx = 2;
+                    panel.add(teacherIDTf,gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 2;
-                panel.add(newSalaryLabel,gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 2;
+                    panel.add(newSalaryLabel,gbc);
 
-                gbc.gridx = 2;
-                panel.add(newSalaryTf, gbc);
+                    gbc.gridx = 2;
+                    panel.add(newSalaryTf, gbc);
 
-                gbc.gridx = 4;
-                gbc.gridy = 1;
-                panel.add(newPerformanceIndexLabel, gbc);
+                    gbc.gridx = 4;
+                    gbc.gridy = 1;
+                    panel.add(newPerformanceIndexLabel, gbc);
 
-                gbc.gridx = 5;
-                panel.add(newPerformanceIndexTf, gbc);
+                    gbc.gridx = 5;
+                    panel.add(newPerformanceIndexTf, gbc);
 
-                gbc.gridx = 3;
-                gbc.gridy = 3;
-                panel.add(gradeAssignmentsButton, gbc);
+                    gbc.gridx = 3;
+                    gbc.gridy = 3;
+                    panel.add(gradeAssignmentsButton, gbc);
 
-                gbc.gridy = 4;
-                panel.add(clearButton, gbc);
+                    gbc.gridy = 4;
+                    panel.add(clearButton, gbc);
+
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             }
         });
 
         removeTutorInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                messageLabel.setText("Remove Tutor");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(false);
-                addressLabel.setVisible(false);
-                workingTypeLabel.setVisible(false);
-                employmentStatusLabel.setVisible(false);
-                yearsOfExperienceLabel.setVisible(false);
-                gradedScoreLabel.setVisible(false);
+               try{
+                   //Setting the required visibility of the various textfields, messagelabels and buttons
+                   messageLabel.setText("Remove Tutor");
+                   messageLabel.setVisible(true);
+                   teacherIDLabel.setVisible(true);
+                   teacherNameLabel.setVisible(false);
+                   addressLabel.setVisible(false);
+                   workingTypeLabel.setVisible(false);
+                   employmentStatusLabel.setVisible(false);
+                   yearsOfExperienceLabel.setVisible(false);
+                   gradedScoreLabel.setVisible(false);
 
 
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(false);
-                addressTf.setVisible(false);
-                workingTypeTf.setVisible(false);
-                employmentStatusTf.setVisible(false);
-                yearsOfExperienceTf.setVisible(false);
-                gradedScoreTf.setVisible(false);
+                   teacherIDTf.setVisible(true);
+                   teacherNameTf.setVisible(false);
+                   addressTf.setVisible(false);
+                   workingTypeTf.setVisible(false);
+                   employmentStatusTf.setVisible(false);
+                   yearsOfExperienceTf.setVisible(false);
+                   gradedScoreTf.setVisible(false);
 
-                newSalaryLabel.setVisible(false);
-                newPerformanceIndexLabel.setVisible(false);
-                newSalaryTf.setVisible(false);
-                newPerformanceIndexTf.setVisible(false);
+                   newSalaryLabel.setVisible(false);
+                   newPerformanceIndexLabel.setVisible(false);
+                   newSalaryTf.setVisible(false);
+                   newPerformanceIndexTf.setVisible(false);
 
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
+                   addLecturerButton.setVisible(false);
+                   clearButton.setVisible(true);
+                   returnButton.setVisible(true);
 
-                addTutorButton.setVisible(false);
-                workingHoursLabel.setVisible(false);
-                departmentLabel.setVisible(false);
-                salaryLabel.setVisible(false);
-                specializationLabel.setVisible(false);
-                academicQualificationsLabel.setVisible(false);
-                performanceIndexLabel.setVisible(false);
-                workingHoursTf.setVisible(false);
-                departmentTf.setVisible(false);
-                salaryTf.setVisible(false);
-                specializationTf.setVisible(false);
-                academicQualificationsTf.setVisible(false);
-                performanceIndexTf.setVisible(false);
-                gradeAssignmentsButton.setVisible(false);
-                setSalaryButton.setVisible(false);
-                removeTutorButton.setVisible(true);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                   addTutorButton.setVisible(false);
+                   workingHoursLabel.setVisible(false);
+                   departmentLabel.setVisible(false);
+                   salaryLabel.setVisible(false);
+                   specializationLabel.setVisible(false);
+                   academicQualificationsLabel.setVisible(false);
+                   performanceIndexLabel.setVisible(false);
+                   workingHoursTf.setVisible(false);
+                   departmentTf.setVisible(false);
+                   salaryTf.setVisible(false);
+                   specializationTf.setVisible(false);
+                   academicQualificationsTf.setVisible(false);
+                   performanceIndexTf.setVisible(false);
+                   gradeAssignmentsButton.setVisible(false);
+                   setSalaryButton.setVisible(false);
+                   removeTutorButton.setVisible(true);
+                   directToGradeAssignmentButton.setVisible(false);
+                   directToSetSalaryButton.setVisible(false);
+                   directToRemoveTutorButton.setVisible(false);
+                   directToAddLecturerButton.setVisible(false);
+                   directToAddTutorButton.setVisible(false);
+                   directToDisplayButton.setVisible(false);
 
-                // // Adding new components to the panel using GridbagConstraints
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                   // // Adding new components to the panel using GridbagConstraints
+                   gbc.gridx = 0;
+                   gbc.gridy = 0;
+                   panel.add(returnButton, gbc);
 
-                gbc.gridx = 2;
-                panel.add(messageLabel, gbc);
+                   gbc.gridx = 2;
+                   panel.add(messageLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                   gbc.gridx = 1;
+                   gbc.gridy = 1;
+                   panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 3;
-                panel.add(teacherIDTf, gbc);
+                   gbc.gridx = 3;
+                   panel.add(teacherIDTf, gbc);
 
-                gbc.gridx = 2;
-                gbc.gridy = 3;
-                panel.add(removeTutorButton, gbc);
+                   gbc.gridx = 2;
+                   gbc.gridy = 3;
+                   panel.add(removeTutorButton, gbc);
 
-                gbc.gridy = 4;
-                panel.add(clearButton, gbc);
+                   gbc.gridy = 4;
+                   panel.add(clearButton, gbc);
+
+               }catch(Exception ex){
+                   JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                   ex.printStackTrace();
+               }
             }
         });
 
         directToRemoveTutorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Setting the required visibility of the various textfields, messagelabels and buttons
-                messageLabel.setText("Remove Tutor");
-                messageLabel.setVisible(true);
-                teacherIDLabel.setVisible(true);
-                teacherNameLabel.setVisible(false);
-                addressLabel.setVisible(false);
-                workingTypeLabel.setVisible(false);
-                employmentStatusLabel.setVisible(false);
-                yearsOfExperienceLabel.setVisible(false);
-                gradedScoreLabel.setVisible(false);
+                try{
+                    //Setting the required visibility of the various textfields, messagelabels and buttons
+                    messageLabel.setText("Remove Tutor");
+                    messageLabel.setVisible(true);
+                    teacherIDLabel.setVisible(true);
+                    teacherNameLabel.setVisible(false);
+                    addressLabel.setVisible(false);
+                    workingTypeLabel.setVisible(false);
+                    employmentStatusLabel.setVisible(false);
+                    yearsOfExperienceLabel.setVisible(false);
+                    gradedScoreLabel.setVisible(false);
 
 
-                teacherIDTf.setVisible(true);
-                teacherNameTf.setVisible(false);
-                addressTf.setVisible(false);
-                workingTypeTf.setVisible(false);
-                employmentStatusTf.setVisible(false);
-                yearsOfExperienceTf.setVisible(false);
-                gradedScoreTf.setVisible(false);
+                    teacherIDTf.setVisible(true);
+                    teacherNameTf.setVisible(false);
+                    addressTf.setVisible(false);
+                    workingTypeTf.setVisible(false);
+                    employmentStatusTf.setVisible(false);
+                    yearsOfExperienceTf.setVisible(false);
+                    gradedScoreTf.setVisible(false);
 
-                newSalaryLabel.setVisible(false);
-                newPerformanceIndexLabel.setVisible(false);
-                newSalaryTf.setVisible(false);
-                newPerformanceIndexTf.setVisible(false);
+                    newSalaryLabel.setVisible(false);
+                    newPerformanceIndexLabel.setVisible(false);
+                    newSalaryTf.setVisible(false);
+                    newPerformanceIndexTf.setVisible(false);
 
-                addLecturerButton.setVisible(false);
-                clearButton.setVisible(true);
-                returnButton.setVisible(true);
+                    addLecturerButton.setVisible(false);
+                    clearButton.setVisible(true);
+                    returnButton.setVisible(true);
 
-                addTutorButton.setVisible(false);
-                workingHoursLabel.setVisible(false);
-                departmentLabel.setVisible(false);
-                salaryLabel.setVisible(false);
-                specializationLabel.setVisible(false);
-                academicQualificationsLabel.setVisible(false);
-                performanceIndexLabel.setVisible(false);
-                workingHoursTf.setVisible(false);
-                departmentTf.setVisible(false);
-                salaryTf.setVisible(false);
-                specializationTf.setVisible(false);
-                academicQualificationsTf.setVisible(false);
-                performanceIndexTf.setVisible(false);
-                gradeAssignmentsButton.setVisible(false);
-                setSalaryButton.setVisible(false);
-                removeTutorButton.setVisible(true);
-                directToGradeAssignmentButton.setVisible(false);
-                directToSetSalaryButton.setVisible(false);
-                directToRemoveTutorButton.setVisible(false);
-                directToAddLecturerButton.setVisible(false);
-                directToAddTutorButton.setVisible(false);
-                directToDisplayButton.setVisible(false);
+                    addTutorButton.setVisible(false);
+                    workingHoursLabel.setVisible(false);
+                    departmentLabel.setVisible(false);
+                    salaryLabel.setVisible(false);
+                    specializationLabel.setVisible(false);
+                    academicQualificationsLabel.setVisible(false);
+                    performanceIndexLabel.setVisible(false);
+                    workingHoursTf.setVisible(false);
+                    departmentTf.setVisible(false);
+                    salaryTf.setVisible(false);
+                    specializationTf.setVisible(false);
+                    academicQualificationsTf.setVisible(false);
+                    performanceIndexTf.setVisible(false);
+                    gradeAssignmentsButton.setVisible(false);
+                    setSalaryButton.setVisible(false);
+                    removeTutorButton.setVisible(true);
+                    directToGradeAssignmentButton.setVisible(false);
+                    directToSetSalaryButton.setVisible(false);
+                    directToRemoveTutorButton.setVisible(false);
+                    directToAddLecturerButton.setVisible(false);
+                    directToAddTutorButton.setVisible(false);
+                    directToDisplayButton.setVisible(false);
 
-                // // Adding new components to the panel using GridbagConstraints
-                gbc.gridx = 0;
-                gbc.gridy = 0;
-                panel.add(returnButton, gbc);
+                    // // Adding new components to the panel using GridbagConstraints
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    panel.add(returnButton, gbc);
 
-                gbc.gridx = 2;
-                panel.add(messageLabel, gbc);
+                    gbc.gridx = 2;
+                    panel.add(messageLabel, gbc);
 
-                gbc.gridx = 1;
-                gbc.gridy = 1;
-                panel.add(teacherIDLabel, gbc);
+                    gbc.gridx = 1;
+                    gbc.gridy = 1;
+                    panel.add(teacherIDLabel, gbc);
 
-                gbc.gridx = 3;
-                panel.add(teacherIDTf, gbc);
+                    gbc.gridx = 3;
+                    panel.add(teacherIDTf, gbc);
 
-                gbc.gridx = 2;
-                gbc.gridy = 3;
-                panel.add(removeTutorButton, gbc);
+                    gbc.gridx = 2;
+                    gbc.gridy = 3;
+                    panel.add(removeTutorButton, gbc);
 
-                gbc.gridy = 4;
-                panel.add(clearButton, gbc);
+                    gbc.gridy = 4;
+                    panel.add(clearButton, gbc);
+
+                }catch (Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             }
         });
 
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Clearing the textfield after the button is pressed
-                teacherIDTf.setText("");
-                teacherNameTf.setText("");
-                addressTf.setText("");
-                workingTypeTf.setText("");
-                employmentStatusTf.setText("");
-                workingHoursTf.setText("");
-                departmentTf.setText("");
-                yearsOfExperienceTf.setText("");
-                gradedScoreTf.setText("");
-                salaryTf.setText("");
-                specializationTf.setText("");
-                academicQualificationsTf.setText("");
-                performanceIndexTf.setText("");
+                try{
+                    //Clearing the textfield after the button is pressed
+                    teacherIDTf.setText("");
+                    teacherNameTf.setText("");
+                    addressTf.setText("");
+                    workingTypeTf.setText("");
+                    employmentStatusTf.setText("");
+                    workingHoursTf.setText("");
+                    departmentTf.setText("");
+                    yearsOfExperienceTf.setText("");
+                    gradedScoreTf.setText("");
+                    salaryTf.setText("");
+                    specializationTf.setText("");
+                    academicQualificationsTf.setText("");
+                    performanceIndexTf.setText("");
+                }catch (Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             }
         });
 
@@ -1355,30 +1417,37 @@ public class GUI {
         addLecturerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int teacherID = Integer.parseInt(teacherIDTf.getText());
-                for (Teacher teacher : Teachers) {
-                    if (teacher.getTeacherID() == teacherID) {
-                        JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
-                        return; // Stop further execution
+                try {
+                    int teacherID = Integer.parseInt(teacherIDTf.getText());
+                    for (Teacher teacher : Teachers) {
+                        if (teacher.getTeacherID() == teacherID) {
+                            JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                            return; // Stop further execution
+                        }
                     }
-                }
-                String teacherName =  teacherNameTf.getText();
-                String address = addressTf.getText();
-                String workingType = workingTypeTf.getText();
-                String employmentStatus = employmentStatusTf.getText();
-                int yearsOfExperience = Integer.parseInt(yearsOfExperienceTf.getText());
-                int gradedScore = Integer.parseInt(gradedScoreTf.getText());
+                    String teacherName = teacherNameTf.getText();
+                    String address = addressTf.getText();
+                    String workingType = workingTypeTf.getText();
+                    String employmentStatus = employmentStatusTf.getText();
+                    int yearsOfExperience = Integer.parseInt(yearsOfExperienceTf.getText());
+                    int gradedScore = Integer.parseInt(gradedScoreTf.getText());
 
-                // Check if any text field is empty
-                if (teacherIDTf.getText().isEmpty() || teacherNameTf.getText().isEmpty() ||
-                        addressTf.getText().isEmpty() || workingTypeTf.getText().isEmpty() ||
-                        employmentStatusTf.getText().isEmpty() || yearsOfExperienceTf.getText().isEmpty() ||
-                        gradedScoreTf.getText().isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
-                    return; // Stop further execution
-                } else {
-                    addLecturer(teacherID, teacherName, address, workingType, employmentStatus, gradedScore, yearsOfExperience);
-                    JOptionPane.showMessageDialog(null, "Lecturer Added");
+                    // Check if any text field is empty
+                    if (teacherIDTf.getText().isEmpty() || teacherNameTf.getText().isEmpty() ||
+                            addressTf.getText().isEmpty() || workingTypeTf.getText().isEmpty() ||
+                            employmentStatusTf.getText().isEmpty() || yearsOfExperienceTf.getText().isEmpty() ||
+                            gradedScoreTf.getText().isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                        return; // Stop further execution
+                    } else {
+                        addLecturer(teacherID, teacherName, address, workingType, employmentStatus, gradedScore, yearsOfExperience);
+                        JOptionPane.showMessageDialog(null, "Lecturer Added");
+                    }
+                }catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Please enter a valid integer for Teacher ID.", "Error", JOptionPane.ERROR_MESSAGE);
+                }catch (Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
             }
         });
@@ -1387,33 +1456,40 @@ public class GUI {
         addTutorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int teacherID = Integer.parseInt(teacherIDTf.getText());
-                for (Teacher teacher : Teachers) {
-                    if (teacher.getTeacherID() == teacherID) {
-                        JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
-                        return; // Stop further execution
+                try{
+                    int teacherID = Integer.parseInt(teacherIDTf.getText());
+                    for (Teacher teacher : Teachers) {
+                        if (teacher.getTeacherID() == teacherID) {
+                            JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                            return; // Stop further execution
+                        }
                     }
-                }
-                String teacherName =  teacherNameTf.getText();
-                String address = addressTf.getText();
-                String workingType = workingTypeTf.getText();
-                String employmentStatus = employmentStatusTf.getText();
-                int performanceIndex = Integer.parseInt(performanceIndexTf.getText());
-                int workingHours = Integer.parseInt(workingHoursTf.getText());
-                double salary =  Double.parseDouble(salaryTf.getText());
-                String specialization = specializationTf.getText();
-                String academicQualifications = academicQualificationsTf.getText();
+                    String teacherName =  teacherNameTf.getText();
+                    String address = addressTf.getText();
+                    String workingType = workingTypeTf.getText();
+                    String employmentStatus = employmentStatusTf.getText();
+                    int performanceIndex = Integer.parseInt(performanceIndexTf.getText());
+                    int workingHours = Integer.parseInt(workingHoursTf.getText());
+                    double salary =  Double.parseDouble(salaryTf.getText());
+                    String specialization = specializationTf.getText();
+                    String academicQualifications = academicQualificationsTf.getText();
 
-                if (teacherIDTf.getText().isEmpty() || teacherNameTf.getText().isEmpty() ||
-                        addressTf.getText().isEmpty() || workingTypeTf.getText().isEmpty() ||
-                        employmentStatusTf.getText().isEmpty() || performanceIndexTf.getText().isEmpty() ||
-                        workingHoursTf.getText().isEmpty() || salaryTf.getText().isEmpty() ||
-                        specializationTf.getText().isEmpty() || academicQualificationsTf.getText().isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
-                    return; // Stop further execution
-                } else {
-                    addTutor(teacherID, teacherName, address, workingType, employmentStatus, salary, specialization, academicQualifications, performanceIndex, workingHours);
-                    JOptionPane.showMessageDialog(null, "Tutor Added");
+                    if (teacherIDTf.getText().isEmpty() || teacherNameTf.getText().isEmpty() ||
+                            addressTf.getText().isEmpty() || workingTypeTf.getText().isEmpty() ||
+                            employmentStatusTf.getText().isEmpty() || performanceIndexTf.getText().isEmpty() ||
+                            workingHoursTf.getText().isEmpty() || salaryTf.getText().isEmpty() ||
+                            specializationTf.getText().isEmpty() || academicQualificationsTf.getText().isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                        return; // Stop further execution
+                    } else {
+                        addTutor(teacherID, teacherName, address, workingType, employmentStatus, salary, specialization, academicQualifications, performanceIndex, workingHours);
+                        JOptionPane.showMessageDialog(null, "Tutor Added");
+                    }
+                }catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Please enter a valid integer for Teacher ID.", "Error", JOptionPane.ERROR_MESSAGE);
+                } catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
             }
         });
@@ -1422,23 +1498,30 @@ public class GUI {
         gradeAssignmentsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int teacherID = Integer.parseInt(teacherIDTf.getText());
-                for (Teacher teacher : Teachers) {
-                    if (teacher.getTeacherID() == teacherID) {
-                        JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
-                        return; // Stop further execution
+                try{
+                    int teacherID = Integer.parseInt(teacherIDTf.getText());
+                    for (Teacher teacher : Teachers) {
+                        if (teacher.getTeacherID() == teacherID) {
+                            JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                            return; // Stop further execution
+                        }
                     }
-                }
-                String department = departmentTf.getText();
-                int gradedScore = Integer.parseInt(gradedScoreTf.getText());
-                int yearsOfExperience = Integer.parseInt(yearsOfExperienceTf.getText());
+                    String department = departmentTf.getText();
+                    int gradedScore = Integer.parseInt(gradedScoreTf.getText());
+                    int yearsOfExperience = Integer.parseInt(yearsOfExperienceTf.getText());
 
-                if (teacherIDTf.getText().isEmpty() || departmentTf.getText().isEmpty() || gradedScoreTf.getText().isEmpty()|| yearsOfExperienceTf.getText().isEmpty()){
-                    JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }else{
-                    gradeAssignment(teacherID, gradedScore, department, yearsOfExperience);
-                    JOptionPane.showMessageDialog(null,"Grades has been assigned");
+                    if (teacherIDTf.getText().isEmpty() || departmentTf.getText().isEmpty() || gradedScoreTf.getText().isEmpty()|| yearsOfExperienceTf.getText().isEmpty()){
+                        JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    }else{
+                        gradeAssignment(teacherID, gradedScore, department, yearsOfExperience);
+                        JOptionPane.showMessageDialog(null,"Grades has been assigned");
+                    }
+                }catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Please enter a valid integer for Teacher ID.", "Error", JOptionPane.ERROR_MESSAGE);
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
             }
         });
@@ -1447,21 +1530,28 @@ public class GUI {
         setSalaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int teacherID = Integer.parseInt(teacherIDTf.getText());
-                for (Teacher teacher : Teachers) {
-                    if (teacher.getTeacherID() == teacherID) {
-                        JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
-                        return; // Stop further execution
+                try{
+                    int teacherID = Integer.parseInt(teacherIDTf.getText());
+                    for (Teacher teacher : Teachers) {
+                        if (teacher.getTeacherID() == teacherID) {
+                            JOptionPane.showMessageDialog(null, "Teacher ID already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                            return; // Stop further execution
+                        }
                     }
-                }
-                int newSalary = Integer.parseInt(newSalaryTf.getText());
-                int newPerformanceIndex = Integer.parseInt(newPerformanceIndexTf.getText());
+                    int newSalary = Integer.parseInt(newSalaryTf.getText());
+                    int newPerformanceIndex = Integer.parseInt(newPerformanceIndexTf.getText());
 
-                if (teacherIDTf.getText().isEmpty() || newSalaryTf.getText().isEmpty() || newPerformanceIndexTf.getText().isEmpty()){
-                    JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
-                } else {
-                    setTutorSalary(teacherID, newSalary, newPerformanceIndex);
-                    JOptionPane.showMessageDialog(null,"New Salary has been assigned");
+                    if (teacherIDTf.getText().isEmpty() || newSalaryTf.getText().isEmpty() || newPerformanceIndexTf.getText().isEmpty()){
+                        JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                    } else {
+                        setTutorSalary(teacherID, newSalary, newPerformanceIndex);
+                        JOptionPane.showMessageDialog(null,"New Salary has been assigned");
+                    }
+                }catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Please enter a valid integer for Teacher ID.", "Error", JOptionPane.ERROR_MESSAGE);
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
             }
         });
@@ -1471,12 +1561,19 @@ public class GUI {
         removeTutorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int teacherID = Integer.parseInt(teacherIDTf.getText());
-                if (teacherIDTf.getText().isEmpty()){
-                    JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
-                }else{
-                    removeTutor(teacherID);
-                    JOptionPane.showMessageDialog(null,"Tutor has been removed");
+                try{
+                    int teacherID = Integer.parseInt(teacherIDTf.getText());
+                    if (teacherIDTf.getText().isEmpty()){
+                        JOptionPane.showMessageDialog(null,"Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+                    }else{
+                        removeTutor(teacherID);
+                        JOptionPane.showMessageDialog(null,"Tutor has been removed");
+                    }
+                }catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Please enter a valid integer for Teacher ID.", "Error", JOptionPane.ERROR_MESSAGE);
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
             }
         });
@@ -1486,44 +1583,49 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                // Creating a new JFrame to hold the table
-                JFrame frame = new JFrame("Teacher Information");
+                try{
+                    // Creating a new JFrame to hold the table
+                    JFrame frame = new JFrame("Teacher Information");
 
-                // Creating a JTable to display the teacher information
-                String[] columnNames = {"Teacher ID", "Teacher Name", "Address", "Working Type", "Employment Status",
-                        "Years of Experience", "Graded Score", "Department", "Salary", "Specialization",
-                        "Academic Qualifications", "Performance Index", "Teacher Type"};
-                Object[][] data = new Object[Teachers.size()][13];
+                    // Creating a JTable to display the teacher information
+                    String[] columnNames = {"Teacher ID", "Teacher Name", "Address", "Working Type", "Employment Status",
+                            "Years of Experience", "Graded Score", "Department", "Salary", "Specialization",
+                            "Academic Qualifications", "Performance Index", "Teacher Type"};
+                    Object[][] data = new Object[Teachers.size()][13];
 
-                int i = 0;
-                for (Teacher teacher : Teachers) {
-                    String teacherType = "";
-                    if (teacher instanceof Lecturer) {
-                        teacherType = "Lecturer";
-                        data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
-                                teacher.getWorkingType(), teacher.getEmploymentStatus(),
-                                ((Lecturer) teacher).getYearsOfExperience(), ((Lecturer) teacher).getGradedScore(),
-                                ((Lecturer) teacher).getDepartment(), "", "", "", "", teacherType}; // Fill empty fields with ""
-                    } else if (teacher instanceof Tutor) {
-                        teacherType = "Tutor";
-                        data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
-                                teacher.getWorkingType(), teacher.getEmploymentStatus(),
-                                "", "", "", ((Tutor) teacher).getSalary(), ((Tutor) teacher).getSpecialization(),
-                                ((Tutor) teacher).getAcademicQualifications(), ((Tutor) teacher).getPerformanceIndex(),
-                                teacherType};
+                    int i = 0;
+                    for (Teacher teacher : Teachers) {
+                        String teacherType = "";
+                        if (teacher instanceof Lecturer) {
+                            teacherType = "Lecturer";
+                            data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
+                                    teacher.getWorkingType(), teacher.getEmploymentStatus(),
+                                    ((Lecturer) teacher).getYearsOfExperience(), ((Lecturer) teacher).getGradedScore(),
+                                    ((Lecturer) teacher).getDepartment(), "", "", "", "", teacherType}; // Fill empty fields with ""
+                        } else if (teacher instanceof Tutor) {
+                            teacherType = "Tutor";
+                            data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
+                                    teacher.getWorkingType(), teacher.getEmploymentStatus(),
+                                    "", "", "", ((Tutor) teacher).getSalary(), ((Tutor) teacher).getSpecialization(),
+                                    ((Tutor) teacher).getAcademicQualifications(), ((Tutor) teacher).getPerformanceIndex(),
+                                    teacherType};
+                        }
+                        i++;
                     }
-                    i++;
+                    JTable table = new JTable(data, columnNames);
+
+                    // Adding the table to a JScrollPane
+                    JScrollPane scrollPane = new JScrollPane(table);
+                    frame.add(scrollPane);
+
+                    // Setting JFrame properties
+                    frame.pack();
+                    frame.setLocationRelativeTo(null); // Center the frame
+                    frame.setVisible(true);
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
-                JTable table = new JTable(data, columnNames);
-
-                // Adding the table to a JScrollPane
-                JScrollPane scrollPane = new JScrollPane(table);
-                frame.add(scrollPane);
-
-                // Setting JFrame properties
-                frame.pack();
-                frame.setLocationRelativeTo(null); // Center the frame
-                frame.setVisible(true);
             }
         });
 
@@ -1531,42 +1633,47 @@ public class GUI {
         displayInfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame();
+                try{
+                    JFrame frame = new JFrame();
 
-                String[] columnNames ={"Teacher ID", "Teacher Name", "Address", "Working Type", "Employment Status",
-                        "Years of Experience", "Graded Score", "Department", "Salary", "Specialization",
-                        "Academic Qualifications", "Performance Index", "Teacher Type"};
-                Object[][] data = new Object[Teachers.size()][13];
+                    String[] columnNames ={"Teacher ID", "Teacher Name", "Address", "Working Type", "Employment Status",
+                            "Years of Experience", "Graded Score", "Department", "Salary", "Specialization",
+                            "Academic Qualifications", "Performance Index", "Teacher Type"};
+                    Object[][] data = new Object[Teachers.size()][13];
 
-                int i = 0;
-                for (Teacher teacher : Teachers){
-                    String teacherType = "";
-                    if (teacher instanceof Lecturer ){
-                        teacherType = "Lecturer";
-                        data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
-                                teacher.getWorkingType(), teacher.getEmploymentStatus(),
-                                ((Lecturer) teacher).getYearsOfExperience(), ((Lecturer) teacher).getGradedScore(),
-                                ((Lecturer) teacher).getDepartment(), "", "", "", "", teacherType};
-                    }else if (teacher instanceof Tutor){
-                        teacherType = "Tutor";
-                        data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
-                                teacher.getWorkingType(), teacher.getEmploymentStatus(),
-                                "", "", "", ((Tutor) teacher).getSalary(), ((Tutor) teacher).getSpecialization(),
-                                ((Tutor) teacher).getAcademicQualifications(), ((Tutor) teacher).getPerformanceIndex(),
-                                teacherType};
+                    int i = 0;
+                    for (Teacher teacher : Teachers){
+                        String teacherType = "";
+                        if (teacher instanceof Lecturer ){
+                            teacherType = "Lecturer";
+                            data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
+                                    teacher.getWorkingType(), teacher.getEmploymentStatus(),
+                                    ((Lecturer) teacher).getYearsOfExperience(), ((Lecturer) teacher).getGradedScore(),
+                                    ((Lecturer) teacher).getDepartment(), "", "", "", "", teacherType};
+                        }else if (teacher instanceof Tutor){
+                            teacherType = "Tutor";
+                            data[i] = new Object[]{teacher.getTeacherID(), teacher.getTeacherName(), teacher.getAddress(),
+                                    teacher.getWorkingType(), teacher.getEmploymentStatus(),
+                                    "", "", "", ((Tutor) teacher).getSalary(), ((Tutor) teacher).getSpecialization(),
+                                    ((Tutor) teacher).getAcademicQualifications(), ((Tutor) teacher).getPerformanceIndex(),
+                                    teacherType};
+                        }
+                        i++;
                     }
-                    i++;
+                    JTable table = new JTable(data, columnNames);
+
+                    // Adding the table to a JScrollPane
+                    JScrollPane scrollPane = new JScrollPane(table);
+                    frame.add(scrollPane);
+
+                    // Setting JFrame properties
+                    frame.pack();
+                    frame.setLocationRelativeTo(null); // Center the frame
+                    frame.setVisible(true);
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
-                JTable table = new JTable(data, columnNames);
-
-                // Adding the table to a JScrollPane
-                JScrollPane scrollPane = new JScrollPane(table);
-                frame.add(scrollPane);
-
-                // Setting JFrame properties
-                frame.pack();
-                frame.setLocationRelativeTo(null); // Center the frame
-                frame.setVisible(true);
             }
         });
     }
